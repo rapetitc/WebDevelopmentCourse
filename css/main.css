@@ -1,0 +1,64 @@
+/* Ajustes por defectos */
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Serif', serif;
+}
+a{
+    color: gray;
+    text-decoration: none;
+}
+body{
+    background-color: rgb(239, 250, 255);
+    background-image: url(../media/background.jpg);
+    background-repeat: round;
+    display: grid;
+}
+
+
+
+/******************************************************************
+Ajustes Generales
+******************************************************************/
+/* AREAS */
+header{
+    grid-area: head;
+}
+main{
+    grid-area: content;
+}
+footer{
+    grid-area: pie;
+}
+
+/* MAIN */
+main{
+    background-color: rgba(235, 235, 235, 1);
+    min-height: 90vh;
+}
+
+/* Template para las grids de desktop*/
+/* body{
+    
+    grid-template-areas: 
+        "head head head"
+        ". content ."
+        "pie pie pie"
+    ;
+    grid-template-columns: 1fr  8fr 1fr;
+} */
+
+
+/* Para comentar secciones importantes*/
+/******************************************************************
+Comentario
+******************************************************************/
+
+
+/******************************************************************
+RESPONSIVE DESING
+******************************************************************/
+
+

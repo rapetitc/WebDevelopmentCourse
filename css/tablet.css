@@ -1,0 +1,140 @@
+/* TABLET */
+@media (min-width: 481px)/*  and (max-width:1023px) */{
+/******************************************************************
+Ajustes Generales
+******************************************************************/
+/* Encabezado */
+    header{
+        height: 80px;
+    }
+    header >  h1 {
+        font-size: 3em;
+    }
+    header > nav > ul {
+        top: 80px;
+    }
+    header > nav > ul > li {
+        font-size: 5vw;
+    }
+/* Encabezado */
+
+
+    
+/******************************************************************
+PAGINA PRINCIPAL Content
+******************************************************************/
+    /* Main Ad*/
+    #index .mainad {
+        width: 100%;
+        height: 45vw;
+    }
+    #index .mainad::before {
+        width: 100%;
+        height: 45vw;
+    }
+    #index .mainad h2{
+        font-size: 5vw;
+    }
+    #index .mainad p{
+        font-size: 2vw;
+    }
+
+
+
+    
+    /* Galeria */
+    #index .gallery{
+        flex-wrap: wrap;
+    }
+
+
+
+    #index .gallery h2{
+        width: 100%;
+    }
+    #index .gallery article{
+        width: 33%;
+    
+    }
+
+
+
+
+/******************************************************************
+PAGINA TIENDA Content
+******************************************************************/
+/*Anuncio*/
+    #offers article img{
+        max-height: 500px;
+    }
+
+/*Barra de Busqueda*/
+    #items .nav-search{
+        height: 4vw;
+    }
+    #items .nav-search form{
+        width: 60%;
+    }
+    #items .nav-search form input{
+        padding: 1%;
+        width: 90%;
+    }
+    #items .nav-search form button{
+        width: 10%;
+    }
+    #items .nav-search .button{
+        width: 10%;
+    }
+
+/*Articulos de la Tienda*/
+    #tienda #items article{
+        width: 49%;
+        height: 35vw;
+    }
+
+
+
+
+
+
+/******************************************************************
+PAGINA NOSOTROS Content
+******************************************************************/
+    #us .content h2{
+        font-size: 7vw;
+    }
+    #us .content section{
+        display: flex;
+        flex-wrap: nowrap;
+    }
+    #us .content section img,
+    #us .content section p{
+        margin: 1%;
+        width: 50%;
+    }
+
+
+
+
+/******************************************************************
+PAGINA NOSOTROS Content
+******************************************************************/
+   #contact .content section h2{
+       font-size: 5vw;
+   }
+
+   #contact .content section{
+       width: 80%;
+   }
+
+
+
+/******************************************************************
+PAGINA PREGUNTAS FRECUENTES Content
+******************************************************************/
+
+
+
+
+
+}
