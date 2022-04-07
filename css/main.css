@@ -358,13 +358,14 @@ PAGINA TIENDA Content
     text-align: justify;
 }
 #items .articleContent .description p{
-    overflow: scroll;
+    overflow:hidden;
     font-size: 0.8em;
     height: 70%;
     /* background-color: gainsboro; */
 }
 #items .articleContent .description .price,
 #items .articleContent .description button{
+    overflow: none;
     text-align: center;
     height: 15%;
     width: 100%;
@@ -458,6 +459,7 @@ PAGINA PREGUNTAS FRECUENTES Content
     margin: 0 auto;
 }
 #qanda h2{
+    margin: 5% 0;
     font-size: 8vw;
     text-align: center;
     /* margin: 5% 0; */
@@ -466,19 +468,28 @@ PAGINA PREGUNTAS FRECUENTES Content
     background-color: aquamarine;
 } */
 #qanda section article{
-    margin: 5% 0;
+    /* margin: 5% 0; */
     /* background-color: red; */
 }
 #qanda section article h3{
     padding: 2% 3%;
-    border-radius: 5px;
+    border-radius:  5px 5px 0 0;
     font-size: 5vw;
     background-color: lightgrey;
 }
 
 #qanda section article p{
-    padding: 0 3%;
-    margin: 5% 0;
+    max-height: 0px;
+    visibility:hidden;
+    background-color: rgba(255, 226, 167, 0.521);
+    border: 1px solid lightgrey;
+    border-top: 0;
+}
+#qanda section article:target p {
+    min-height: 100px;
+    max-height: 100%;
+    visibility: visible;
+    padding: 3% 3%;
 }
 
 
@@ -569,8 +580,11 @@ PAGINA PRINCIPAL Content
 PAGINA TIENDA Content
 ******************************************************************/
 /*Anuncio*/
-    #offers article img{
+    #offers{
         max-height: 500px;
+    }
+    #offers .slider .sliderItems img{
+        object-fit: cover;
     }
 
 /*Barra de Busqueda*/
