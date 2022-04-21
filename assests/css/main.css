@@ -3,7 +3,7 @@
 }
 
 body{
-    background-image: url(/assests/media/background.jpg);
+    background-image: url(../media/background.jpg);
     background-repeat: repeat-y;
     background-position: top;
 
@@ -23,7 +23,7 @@ footer ul li{
 
 #mainad{
     position: relative;
-    background-image: url(/assests/media/mainad.gif);
+    background-image: url(../media/mainad.gif);
     background-repeat: no-repeat;
     background-size: cover;
     height: 380px;
