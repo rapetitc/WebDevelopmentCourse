@@ -29,14 +29,7 @@ footer ul li{
     height: 380px;
 }
 
-/* #mainad::before{
-    content: '';
-    display: inline-block;
-    position: relative;
-    background-color: rgba(0, 0, 0, 0.7);
-    width: inherit;
-    height: inherit;
-} */
+
 
 #mainad h2,
 #mainad p{
@@ -62,4 +55,8 @@ footer ul li{
 }
 #carouselExampleSlidesOnly .carousel-inner img{
     max-height: 370px;
+}
+
+#socials{
+    margin: 0 auto;
 }
