@@ -19,15 +19,10 @@ footer ul li{
     list-style: none;
 }
 
-
 /* Main Ad Index */
 #mainad{
     position: relative;
-<<<<<<< HEAD
-    background-image: url(../media/background.jpg);
-=======
     background-image: url(../media/mainad.gif);
->>>>>>> edit/ApplyingBootstrap
     background-repeat: no-repeat;
     background-size: cover;
     height: 380px;
