@@ -1,36 +1,33 @@
+/* General Settings */
 *{
     font-family: 'Noto Serif';
 }
 
 body{
-    background-image: url(/assests/media/background.jpg);
+    background-image: url(../media/background.jpg);
     background-repeat: repeat-y;
     background-position: top;
-
 }
 
+/* Logo Navbar */
 #logo{
     max-height: 50px;
 }
 
-
+/* Footer Socials */
 footer ul li{
     list-style: none;
 }
 
 
-
-
+/* Main Ad Index */
 #mainad{
     position: relative;
-    background-image: url(/assests/media/mainad.gif);
+    background-image: url(../media/mainad.gif);
     background-repeat: no-repeat;
     background-size: cover;
     height: 380px;
 }
-
-
-
 #mainad h2,
 #mainad p{
     background-color: rgba(0, 0, 0, 0.7);
@@ -45,18 +42,7 @@ footer ul li{
     padding: 50px 5vw 0 5vw;
 }
 
-#carouselExampleSlidesOnly{
-    max-height: 370px;
-}
-
-
-#carouselExampleSlidesOnly .carousel-inner{
-    max-height: 370px;
-}
+/* Store carousel */
 #carouselExampleSlidesOnly .carousel-inner img{
     max-height: 370px;
-}
-
-#socials{
-    margin: 0 auto;
 }
