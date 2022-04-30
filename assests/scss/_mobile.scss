@@ -1,0 +1,520 @@
+/* MOBILE */
+/******************************************************************
+Ajustes Generales
+******************************************************************/
+body{
+    grid-template-areas: 
+        "head"
+        "content"
+        "pie"
+    ;
+    grid-template-columns: 1fr;
+}
+
+
+
+
+
+.mainsheet{
+    min-height: 100vh;
+    min-width: 100%;
+    background: no-repeat center url(/assests/media/mainad.gif);
+    background-size:cover;
+    color: white;
+    /* &::before{
+        content: 'sa';
+        background-color: rgba(0, 0, 0, 0.6);
+        width: 100%;
+        height: 100%;
+        position:absolute;
+    } */
+    header{
+        height: 8vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        background-color: rgba(0, 0, 0, 0.6);
+
+        nav{
+            background-color: green;
+            ul{
+                display: flex;
+                background-color: red;
+                li{
+                    background-color: orange;
+                    a{
+                        height: inherit;
+                        width: inherit;
+                    }
+                }
+            }
+        }
+
+
+
+
+        &::after{
+            content: '';
+            background-color: rgba(0, 0, 0, 0.6);
+            min-height: 92vh;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            top: 8vh;
+            position:absolute;
+
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Encabezado */
+/* header{
+    height: 15vw;
+    max-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgb(47, 82, 100);
+} */
+
+/* Logo */
+/* header > .logo{
+    margin: 0 2.5%;
+    height: 100%;
+} */
+
+/* Titulo */
+/* header >  h1 {
+    width: 80%;
+    text-align: center;
+    font-size: 3em;
+    letter-spacing: 0.3vw;
+}
+header > h1 > a {
+    text-decoration: none;
+    color: white;
+} */
+
+/* Estilos para el menu */
+/* header > nav {
+    text-align: center;
+    width: 20%;
+}
+header > nav > label {
+    font-size: 1rem;
+}
+header > nav > input {
+    display: none;
+}
+input#menuBtn:checked ~ ul#menu {
+    display: inline;
+} 
+header > nav > ul {
+    z-index: 10;
+    background-color: orange;
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 15vw;
+    width: 100%;
+}
+header > nav > ul > li {
+    list-style: none;
+    font-size: 7vw;
+    text-align: center;
+    width: 100%;
+}
+header > nav > ul > li:hover{
+    background-color: rgb(196, 127, 0);
+}
+header > nav > ul > li > a {
+    color: white;
+} */
+/* Encabezado */
+
+
+
+
+
+
+
+
+
+
+
+
+/******************************************************************
+PAGINA PRINCIPAL Content
+******************************************************************/
+/* Main Ad*/
+#index .mainad {
+    background: no-repeat center url(https://metalyplast.000webhostapp.com/media/mainad.gif);
+    background-size: cover;
+    margin: 0 auto 5vw auto;
+    width: 100%;
+    height: 55vw;
+    display: flex;
+    flex-wrap: wrap;
+}
+#index .mainad::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 55vw;
+    background-color: rgba(0, 0, 0, 0.616);
+}
+#index .mainad p,
+#index .mainad h2 {
+    z-index: 2;
+}
+#index .mainad h2 {
+    width: 100%;
+    align-self: center;
+    color: white;
+    text-align: center;
+    border-radius: 50px;
+}
+#index .mainad p {
+    align-self: flex-end;
+    padding: 5%;
+    color: white;
+    text-align:end;
+    /* line-height: 100%; */
+}
+
+
+/* Galeria */
+#index .gallery{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 1%;
+} 
+#index .gallery h2{
+    width: 100%;
+    margin: 2vw 0;
+    text-align: center;
+}
+#index .gallery article{
+    width: 80%;
+    margin: 2vw auto;
+}
+#index .gallery img{
+    transition: 0.5s;
+    width: 100%;
+}
+#index .gallery img:hover{
+    scale: 1.1;
+    box-shadow: 0 0 50px black;
+}
+
+
+
+/******************************************************************
+PAGINA TIENDA Content
+******************************************************************/
+/*Anuncio*/
+#offers{
+    overflow: hidden;
+}
+#offers .slider{
+    animation: sliderControl 10s infinite ease;
+    width: 200%;
+    height: 50vw;
+    display: flex;
+    flex-wrap: nowrap;
+}
+#offers .slider .sliderItems{
+    width: 100%;
+    height: 100%;
+}
+#offers .slider .sliderItems img{
+    width: 100%;
+    height: 100%;
+    /* border: 1px solid black; */
+}
+@keyframes sliderControl {
+    5%{margin-left: 0;}
+    45%{margin-left: 0;}
+    
+    50%{margin-left: -100%;}
+    95%{margin-left: -100%;}
+}
+
+
+
+
+/*Barra de Busqueda*/
+#tienda #items {
+    display: flex;
+    flex-wrap: wrap;
+}
+#items .nav-search{
+    margin: 2vw 0;
+    width: 100%;
+    height: 7vw;
+    display: flex;
+    justify-content: space-evenly;
+}
+#items .nav-search form{
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    width: 70%;
+    height: 100%;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+#items .nav-search form input,
+#items .nav-search form button{
+    height: 100%;
+    margin: 0;
+    border: none
+}
+#items .nav-search form input{
+    padding: 1%;
+    width: 80.5%;
+}
+#items .nav-search form button{
+    width: 18.2%;
+    padding: 1%;
+    background-color: orange;
+    border-radius: 5px;
+}
+#items .nav-search .button{
+    width: 18.2%;
+    font-size: 0.9em;
+    padding: 1%;
+    background-color: lightgrey;
+    text-align: center;
+    border: 1px solid gray;
+    border-radius: 5px;
+
+}
+#filterSearch{
+    display: none;
+}
+
+
+/*Articulos de la Tienda*/
+#tienda #items article{
+    padding: 1%;
+    width: 95%;
+    height: 60vw;
+    background-color: white;
+    margin: 2vw auto;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 8px;
+    border: 1px lightgray solid;
+}
+#tienda #items article:hover{
+    /* transition: 1s; */
+    box-shadow: 0px 0px 30px black;
+    scale: 1.01;
+}
+#items h3,
+#items .articleContent {
+    margin: 0 1%;
+}
+#items h3{
+    /* background-color: red; */
+    width: 100%;
+    height: 10%;
+}
+#items .articleContent {
+    height: 90%;
+    display: flex;
+    flex-wrap: wrap;
+}
+#items .articleContent img,
+#items .articleContent .description {
+    margin: 0.5% 0.5%;
+    width: 48%;
+    height: 98%;
+}
+#items .articleContent img {
+    transition: 0.5s;
+}
+#items .articleContent img:hover {
+    scale: 1.05;
+    cursor:pointer
+}/* 
+#items .articleContent {
+    width: 50%;
+} */
+/* #items .articleContent h3{
+    height: 10%;
+} */
+#items .articleContent .description{
+    text-align: justify;
+}
+#items .articleContent .description p{
+    overflow:hidden;
+    font-size: 0.8em;
+    height: 70%;
+    /* background-color: gainsboro; */
+}
+#items .articleContent .description .price,
+#items .articleContent .description button{
+    overflow: none;
+    text-align: center;
+    height: 15%;
+    width: 100%;
+    border-radius: 10px;
+    font-size: 0.9em;
+}
+#items .articleContent .description button{
+    background-color: lightgreen;
+}
+
+
+
+
+
+
+
+
+
+/******************************************************************
+PAGINA NOSOTROS Content
+******************************************************************/
+/* #us .content{
+    background-color: red;
+} */
+
+#us .content h2{
+    width: 100%;
+    margin: 2%;
+    text-align: center;
+    font-size: 10vw;
+}
+#us .content section{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1%;
+}
+
+#us .content section img,
+#us .content section p{
+    margin: 1%;
+    width: 100%;
+}
+
+
+
+
+
+/******************************************************************
+PAGINA CONTACTP Content
+******************************************************************/
+#contact .content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+#contact .content section{
+    width: 100%;
+}
+#contact .content section h2{
+    font-size: 10vw;
+    text-align: center;
+    margin: 3% 0;
+}
+/* #contact .content .formContact{
+    background-color: aqua;
+} */
+#contact .content .formContact form{
+    width: 90%;
+    margin: 0 auto;
+}
+#contact .content .formContact form label,
+#contact .content .formContact form input,
+#contact .content .formContact form textarea,
+#contact .content .formContact form button{
+    width: 100%;
+}
+#contact .content .map iframe{
+    width: 100%;
+}
+
+
+
+
+
+/******************************************************************
+PAGINA PREGUNTAS FRECUENTES Content
+******************************************************************/
+#qanda h2,
+#qanda section{
+    width: 95%;
+    margin: 0 auto;
+}
+#qanda h2{
+    margin: 5% 0;
+    font-size: 8vw;
+    text-align: center;
+    /* margin: 5% 0; */
+}
+/* #qanda section{
+    background-color: aquamarine;
+} */
+#qanda section article h3{
+    padding: 2% 3%;
+    border-radius:  5px 5px 0 0;
+    font-size: 5vw;
+    background-color: lightgrey;
+}
+
+#qanda section article p{
+    max-height: 0px;
+    visibility:hidden;
+    background-color: rgba(255, 226, 167, 0.521);
+    border: 1px solid lightgrey;
+    border-top: 0;
+}
+#qanda section article:target p {
+    min-height: 100px;
+    max-height: 100%;
+    visibility: visible;
+    padding: 3% 3%;
+}
+
+
+
+
+
+
+
+
+/******************************************************************
+Ajustes Generales
+******************************************************************/
+footer {
+    width: 100%;
+    padding: 10px 0;
+    color: white;
+    text-align: center;
+    letter-spacing: 0.7vw;
+    text-shadow: 0 0 20px black;
+    background-color: rgb(47, 82, 100);
+}
