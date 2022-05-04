@@ -1,138 +1,132 @@
 /* TABLET */
 @media (min-width: 481px)/*  and (max-width:1023px) */{
-    /******************************************************************
-    Ajustes Generales
-    ******************************************************************/
+/******************************************************************
+Ajustes Generales
+******************************************************************/
     /* Encabezado */
-        header{
-            height: 80px;
+    header{
+        h1{
+            font-size: 2.5em;
         }
-        header >  h1 {
-            font-size: 3em;
+        nav {
+            ul{
+                top: 80px;
+                li {
+                    font-size: 3em;
+                }
+            }
         }
-        header > nav > ul {
-            top: 80px;
-        }
-        header > nav > ul > li {
-            font-size: 5vw;
-        }
-    /* Encabezado */
-        
-        
-            
-    /******************************************************************
-    PAGINA PRINCIPAL Content
-    ******************************************************************/
-        /* Main Ad*/
-        #index .mainad {
-            width: 100%;
-            height: 45vw;
-        }
-        #index .mainad::before {
-            width: 100%;
-            height: 45vw;
-        }
-        #index .mainad h2{
-            font-size: 5vw;
-        }
-        #index .mainad p{
-            font-size: 2vw;
-        }
-    
-    
-    
-        
-        /* Galeria */
-        #index .gallery{
-            flex-wrap: wrap;
-        }
-    
-    
-    
-        #index .gallery h2{
-            width: 100%;
-        }
-        #index .gallery article{
-            width: 33%;
-        
-        }
-        
-        
-        
-        
-    /******************************************************************
-    PAGINA TIENDA Content
-    ******************************************************************/
-    /*Anuncio*/
-        #offers{
+    }
+
+/******************************************************************
+PAGINA PRINCIPAL Content
+******************************************************************/
+    /* Main Ad*/
+    .mainad {
+        max-height: 500px;
+        &::before {
+            content: '';
             max-height: 500px;
         }
-        #offers .slider .sliderItems img{
-            object-fit: cover;
+        h2{
+            font-size: 2em;
         }
-    
-    /*Barra de Busqueda*/
-        #items .nav-search{
-            height: 4vw;
+        p{
+            font-size: 1.3em;
         }
-        #items .nav-search form{
-            width: 60%;
+    }
+
+    /* Galeria */
+    .gallery{
+        h2{
+            font-size: 2.5em;
         }
-        #items .nav-search form input{
-            padding: 1%;
-            width: 90%;
+        article{
+            width: 30%;
         }
-        #items .nav-search form button{
-            width: 10%;
+    }
+
+    #index .gallery{
+        flex-wrap: wrap;
+    }
+
+/******************************************************************
+PAGINA TIENDA Content
+******************************************************************/
+    /*Anuncio*/
+    .sliders{
+        max-height: 500px;
+        .sliderItems{
+            .sliderItem{
+                img{
+                    height: 100%;
+                }
+            }
         }
-        #items .nav-search .button{
-            width: 10%;
-        }
-    
+    }
+
     /*Articulos de la Tienda*/
-        #tienda #items article{
-            width: 49%;
-            height: 35vw;
+    .purchaseItems{
+        .nav-search{
+            form{
+                .search-bar{
+                    width: 70%;
+                    input[type=search]{
+                        width: 87.5%;
+                    }
+                    button{
+                        width: 12.5%;
+                    }
+                }
+                .filterSection{
+                    label{
+                        width: 40%;
+                    }
+                }
+            }
         }
-        
-        
-        
-        
-        
-        
-    /******************************************************************
-    PAGINA NOSOTROS Content
-    ******************************************************************/
-        #us .content h2{
-            font-size: 7vw;
+        article{
+            width: 30%;
+            max-height: 375px;
         }
-        #us .content section{
-            display: flex;
-            flex-wrap: nowrap;
+    } 
+
+/******************************************************************
+PAGINA NOSOTROS Content
+******************************************************************/
+    /* articles */
+    .sections{
+        .article{
+            h2{
+                margin: 25px 0;
+                font-size: 1.7em;
+            }
+            p{
+                font-size: 1.3em;
+                letter-spacing: 1px;
+                line-height: 25px;
+            }
         }
-        #us .content section img,
-        #us .content section p{
-            margin: 1%;
-            width: 50%;
+    }
+        
+/******************************************************************
+PAGINA PREGUNTAS FRECUENTES Content
+******************************************************************/
+    .qanda{
+        h2{
+            font-size: 2em;
         }
-        
-        
-        
-        
-    /******************************************************************
-    PAGINA NOSOTROS Content
-    ******************************************************************/
-        #contact .content section h2{
-            font-size: 5vw;
+        .questions{
+            .question{
+                h3{
+                    font-size: 1.7em;
+                }
+                p{
+                    font-size: 1.3em
+                }
+            }
         }
-    
-        #contact .content section{
-            width: 80%;
-        }
-        
-        
-        
-    /******************************************************************
-    PAGINA PREGUNTAS FRECUENTES Content
-    ******************************************************************/
+    }
+
+
 }

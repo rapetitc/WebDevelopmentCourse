@@ -2,10 +2,9 @@
 body {
   background-color: rgb(239, 250, 255);
   background-image: url(../media/background.jpg);
+  background-repeat: no-repeat;
   background-repeat: round;
   display: grid;
-  /* max-width: 100vw; */
-  /* overflow-x: hidden; */
 }
 
 /******************************************************************
@@ -16,7 +15,7 @@ header {
   grid-area: head;
 }
 
-main {
+.container {
   grid-area: content;
 }
 
@@ -25,9 +24,9 @@ footer {
 }
 
 /* MAIN */
-main {
-  background-color: rgb(235, 235, 235);
-  min-height: 90vh;
+.container {
+  background-color: rgb(255, 255, 255);
+  min-height: 100vh;
 }
 
 /* Template para las grids de desktop*/
@@ -106,182 +105,147 @@ body {
   grid-template-columns: 1fr;
 }
 
-.mainsheet {
-  min-height: 100vh;
-  min-width: 100%;
-  background: no-repeat center url(/assests/media/mainad.gif);
-  background-size: cover;
-  color: white;
-  /* &::before{
-      content: 'sa';
-      background-color: rgba(0, 0, 0, 0.6);
-      width: 100%;
-      height: 100%;
-      position:absolute;
-  } */
-}
-.mainsheet header {
-  height: 8vh;
-  width: 100%;
+/* Encabezado */
+header {
+  height: 15vw;
+  max-height: 80px;
   display: flex;
   align-items: center;
   justify-content: space-around;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgb(0, 98, 245);
 }
-.mainsheet header nav {
-  background-color: green;
+header a {
+  margin: 0 2.5%;
+  height: 60%;
 }
-.mainsheet header nav ul {
-  display: flex;
-  background-color: red;
+header a .logo {
+  height: 100%;
 }
-.mainsheet header nav ul li {
-  background-color: orange;
+header h1 {
+  width: 80%;
+  text-align: center;
+  font-size: 1.8em;
+  letter-spacing: 0.3vw;
 }
-.mainsheet header nav ul li a {
-  height: inherit;
-  width: inherit;
+header h1 a {
+  text-decoration: none;
+  color: white;
 }
-.mainsheet header::after {
-  content: "";
-  background-color: rgba(0, 0, 0, 0.6);
-  min-height: 92vh;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  top: 8vh;
+header nav {
+  text-align: center;
+  width: 20%;
+}
+header nav label {
+  font-size: 2rem;
+  background-color: rgb(233, 151, 0);
+  border: 1px solid rgb(177, 177, 177);
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+header nav label:active {
+  background-color: rgb(182, 118, 1);
+}
+header nav input {
+  display: none;
+}
+header nav ul {
+  z-index: 10;
+  background-color: rgb(233, 151, 0);
+  display: none;
   position: absolute;
+  left: 0;
+  top: 15vw;
+  width: 100%;
+}
+header nav ul li {
+  list-style: none;
+  font-size: 1.5rem;
+  text-align: center;
+}
+header nav ul li:hover {
+  background-color: rgb(182, 118, 1);
+}
+header nav ul li a {
+  text-decoration: none;
+  color: white;
+}
+header nav ul li a p {
+  padding: 1px 0;
+  width: 100%;
 }
 
-/* Encabezado */
-/* header{
-    height: 15vw;
-    max-height: 80px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    background-color: rgb(47, 82, 100);
-} */
-/* Logo */
-/* header > .logo{
-    margin: 0 2.5%;
-    height: 100%;
-} */
-/* Titulo */
-/* header >  h1 {
-    width: 80%;
-    text-align: center;
-    font-size: 3em;
-    letter-spacing: 0.3vw;
-}
-header > h1 > a {
-    text-decoration: none;
-    color: white;
-} */
-/* Estilos para el menu */
-/* header > nav {
-    text-align: center;
-    width: 20%;
-}
-header > nav > label {
-    font-size: 1rem;
-}
-header > nav > input {
-    display: none;
-}
 input#menuBtn:checked ~ ul#menu {
-    display: inline;
-} 
-header > nav > ul {
-    z-index: 10;
-    background-color: orange;
-    display: none;
-    position: absolute;
-    left: 0;
-    top: 15vw;
-    width: 100%;
+  display: inline;
 }
-header > nav > ul > li {
-    list-style: none;
-    font-size: 7vw;
-    text-align: center;
-    width: 100%;
-}
-header > nav > ul > li:hover{
-    background-color: rgb(196, 127, 0);
-}
-header > nav > ul > li > a {
-    color: white;
-} */
-/* Encabezado */
+
 /******************************************************************
 PAGINA PRINCIPAL Content
 ******************************************************************/
 /* Main Ad*/
-#index .mainad {
-  background: no-repeat center url(https://metalyplast.000webhostapp.com/media/mainad.gif);
+.mainad {
+  background: no-repeat center url(/assests/media/mainad.gif);
   background-size: cover;
-  margin: 0 auto 5vw auto;
   width: 100%;
   height: 55vw;
   display: flex;
   flex-wrap: wrap;
 }
-
-#index .mainad::before {
+.mainad::before {
   content: "";
   position: absolute;
   width: 100%;
   height: 55vw;
   background-color: rgba(0, 0, 0, 0.616);
 }
-
-#index .mainad p,
-#index .mainad h2 {
+.mainad p, .mainad h2 {
   z-index: 2;
 }
-
-#index .mainad h2 {
-  width: 100%;
+.mainad h2 {
+  width: 95%;
+  padding: 2.5%;
   align-self: center;
   color: white;
+  font-size: 1.5em;
   text-align: center;
   border-radius: 50px;
 }
-
-#index .mainad p {
+.mainad p {
   align-self: flex-end;
   padding: 5%;
   color: white;
   text-align: end;
-  /* line-height: 100%; */
 }
 
-/* Galeria */
-#index .gallery {
+.gallery {
   display: flex;
   flex-wrap: wrap;
   padding: 0 1%;
 }
-
-#index .gallery h2 {
+.gallery h2 {
+  font-size: 1.5em;
   width: 100%;
   margin: 2vw 0;
   text-align: center;
 }
-
-#index .gallery article {
-  width: 80%;
+.gallery h2::after {
+  content: "-------------------------------------";
+  display: block;
+}
+.gallery h2::before {
+  content: "-------------------------------------";
+  display: block;
+}
+.gallery article {
+  width: 45%;
   margin: 2vw auto;
 }
-
-#index .gallery img {
+.gallery article img {
   transition: 0.5s;
   width: 100%;
 }
-
-#index .gallery img:hover {
+.gallery article img:hover {
   scale: 1.1;
+  border-radius: 10px;
   box-shadow: 0 0 50px black;
 }
 
@@ -289,27 +253,23 @@ PAGINA PRINCIPAL Content
 PAGINA TIENDA Content
 ******************************************************************/
 /*Anuncio*/
-#offers {
+.sliders {
   overflow: hidden;
 }
-
-#offers .slider {
+.sliders .sliderItems {
   animation: sliderControl 10s infinite ease;
   width: 200%;
   height: 50vw;
   display: flex;
   flex-wrap: nowrap;
 }
-
-#offers .slider .sliderItems {
+.sliders .sliderItems .sliderItem {
   width: 100%;
   height: 100%;
 }
-
-#offers .slider .sliderItems img {
+.sliders .sliderItems .sliderItem img {
   width: 100%;
   height: 100%;
-  /* border: 1px solid black; */
 }
 
 @keyframes sliderControl {
@@ -327,248 +287,262 @@ PAGINA TIENDA Content
   }
 }
 /*Barra de Busqueda*/
-#tienda #items {
+.purchaseItems {
   display: flex;
   flex-wrap: wrap;
+  /*Articulos de la Tienda*/
 }
-
-#items .nav-search {
-  margin: 2vw 0;
+.purchaseItems .nav-search {
+  /* background-color: gray; */
+  margin: 20px 0;
   width: 100%;
-  height: 7vw;
   display: flex;
   justify-content: space-evenly;
 }
-
-#items .nav-search form {
+.purchaseItems .nav-search form {
   display: flex;
+  justify-content: space-evenly;
+  /* background-color: red; */
+  padding: 0 5%;
+  width: 90%;
+  height: 35px;
+}
+.purchaseItems .nav-search form .search-bar {
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  flex-wrap: nowrap;
   justify-content: space-between;
-  background-color: white;
-  width: 70%;
-  height: 100%;
-  border: 1px solid gray;
+  width: 80%;
+  border: 1px solid gold;
   border-radius: 5px;
 }
-
-#items .nav-search form input,
-#items .nav-search form button {
-  height: 100%;
-  margin: 0;
+.purchaseItems .nav-search form .search-bar input[type=search] {
+  width: 80%;
+  padding-left: 10px;
+  border-radius: 5px 0 0 5px;
+}
+.purchaseItems .nav-search form .search-bar input[type=search]:focus {
   border: none;
 }
-
-#items .nav-search form input {
-  padding: 1%;
-  width: 80.5%;
+.purchaseItems .nav-search form .search-bar button {
+  border-radius: 0 5px 5px 0;
+  width: 20%;
+  background-color: rgb(233, 151, 0);
 }
-
-#items .nav-search form button {
-  width: 18.2%;
-  padding: 1%;
-  background-color: orange;
+.purchaseItems .nav-search form .search-bar input[type=search],
+.purchaseItems .nav-search form .search-bar button {
+  border: none;
+}
+.purchaseItems .nav-search form .filterSection {
+  width: 20%;
+  /* background-color: aqua; */
+}
+.purchaseItems .nav-search form .filterSection label {
+  display: block;
+  width: 70%;
+  margin: 0 15%;
+  height: 100%;
   border-radius: 5px;
+  background-color: rgb(233, 151, 0);
 }
-
-#items .nav-search .button {
-  width: 18.2%;
-  font-size: 0.9em;
-  padding: 1%;
-  background-color: lightgrey;
-  text-align: center;
-  border: 1px solid gray;
-  border-radius: 5px;
+.purchaseItems .nav-search form .filterSection label i {
+  margin: 10.5px 33.5%;
 }
-
-#filterSearch {
+.purchaseItems .nav-search form #filterSearch {
   display: none;
 }
-
-/*Articulos de la Tienda*/
-#tienda #items article {
-  padding: 1%;
-  width: 95%;
+.purchaseItems .nav-search form .filterSelection {
+  display: none;
+  position: fixed;
+  background-color: rgba(228, 228, 228, 0.3);
+  width: 100vw;
+  height: 100vh;
+  left: 0;
+  top: 0;
+}
+.purchaseItems .nav-search form .filterSelection .contentFilter {
+  display: inline;
+  position: absolute;
+  width: 100vw;
+  height: 50vh;
+  bottom: 0;
+  background-color: rgb(0, 98, 245);
+  border-radius: 10px 10px 0 0;
+}
+.purchaseItems .nav-search form .filterSelection .contentFilter label.btn {
+  margin: 0;
+  width: 35px;
+  height: 35px;
+  display: inline;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+}
+.purchaseItems .nav-search form .filterSelection .contentFilter h3 {
+  font-size: 1.3em;
+  text-align: center;
+  margin: 15px 0;
+}
+.purchaseItems .nav-search form .filterSelection .contentFilter .filterValues {
+  background-color: rgba(235, 235, 235, 0.904);
+  display: block;
+  width: 90%;
+  min-height: 100%;
+  overflow-y: scroll;
+  padding: 10px 5%;
+}
+.purchaseItems .nav-search form .filterSelection .contentFilter .filterValues .filter {
+  margin: 25px 0;
+}
+.purchaseItems .nav-search form .filterSelection .contentFilter .filterValues h4 {
+  padding-left: 15px;
+  padding-bottom: 5px;
+  font-size: 1.2em;
+  margin: 15px 0;
+  border-bottom: 1px solid black;
+}
+.purchaseItems .nav-search form .filterSelection .contentFilter .filterValues label {
+  display: inline;
+  margin: 0;
+  background-color: rgba(255, 255, 255, 0);
+}
+.purchaseItems input#filterSearch:checked ~ .filterSelection {
+  display: inline;
+}
+.purchaseItems article {
+  transition: box-shadow 0.3s;
+  width: 45%;
   height: 60vw;
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   margin: 2vw auto;
   display: flex;
   flex-wrap: wrap;
-  border-radius: 8px;
   border: 1px lightgray solid;
+  border-radius: 3px;
 }
-
-#tienda #items article:hover {
-  /* transition: 1s; */
-  box-shadow: 0px 0px 30px black;
+.purchaseItems article:hover {
+  box-shadow: 0px 0px 5px black;
   scale: 1.01;
 }
-
-#items h3,
-#items .articleContent {
-  margin: 0 1%;
-}
-
-#items h3 {
-  /* background-color: red; */
+.purchaseItems article .articleImg {
   width: 100%;
-  height: 10%;
+  height: 80%;
+  border-bottom: 1px solid rgb(131, 131, 131);
 }
-
-#items .articleContent {
-  height: 90%;
-  display: flex;
-  flex-wrap: wrap;
-}
-
-#items .articleContent img,
-#items .articleContent .description {
-  margin: 0.5% 0.5%;
-  width: 48%;
-  height: 98%;
-}
-
-#items .articleContent img {
+.purchaseItems article img {
+  display: block;
+  margin: 0 auto;
+  max-height: 100%;
+  max-width: 100%;
   transition: 0.5s;
 }
-
-#items .articleContent img:hover {
+.purchaseItems article img:hover {
   scale: 1.05;
   cursor: pointer;
 }
-
-/* 
-#items .articleContent {
-    width: 50%;
-} */
-/* #items .articleContent h3{
-    height: 10%;
-} */
-#items .articleContent .description {
-  text-align: justify;
+.purchaseItems article .description {
+  padding: 5px;
+  width: 75%;
 }
-
-#items .articleContent .description p {
-  overflow: hidden;
-  font-size: 0.8em;
-  height: 70%;
-  /* background-color: gainsboro; */
-}
-
-#items .articleContent .description .price,
-#items .articleContent .description button {
-  overflow: none;
-  text-align: center;
-  height: 15%;
-  width: 100%;
-  border-radius: 10px;
-  font-size: 0.9em;
-}
-
-#items .articleContent .description button {
-  background-color: lightgreen;
+.purchaseItems article button {
+  width: 19%;
+  height: 18%;
 }
 
 /******************************************************************
 PAGINA NOSOTROS Content
 ******************************************************************/
-/* #us .content{
-    background-color: red;
-} */
-#us .content h2 {
-  width: 100%;
-  margin: 2%;
-  text-align: center;
-  font-size: 10vw;
-}
-
-#us .content section {
+.sections {
+  width: 95%;
+  padding: 2.5%;
+  margin: 10px auto;
   display: flex;
   flex-wrap: wrap;
-  padding: 1%;
 }
-
-#us .content section img,
-#us .content section p {
-  margin: 1%;
+.sections .article {
   width: 100%;
+}
+.sections .article h2 {
+  margin: 10px auto;
+  text-align: center;
+  font-size: 1.5em;
+}
+.sections .article img {
+  width: 50%;
+  margin: 5px 10px;
+}
+.sections .article p {
+  padding: 5;
+  text-align: justify;
 }
 
 /******************************************************************
-PAGINA CONTACTP Content
+PAGINA CONTACTO Content
 ******************************************************************/
-#contact .content {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+.contactUs,
+.map {
+  margin: 50px 0;
 }
 
-#contact .content section {
-  width: 100%;
-}
-
-#contact .content section h2 {
+.contactUs h2,
+.map h2 {
   font-size: 10vw;
   text-align: center;
   margin: 3% 0;
 }
 
-/* #contact .content .formContact{
-    background-color: aqua;
-} */
-#contact .content .formContact form {
-  width: 90%;
-  margin: 0 auto;
-}
-
-#contact .content .formContact form label,
-#contact .content .formContact form input,
-#contact .content .formContact form textarea,
-#contact .content .formContact form button {
+.contactUs {
   width: 100%;
 }
+.contactUs form {
+  width: 100%;
+}
+.contactUs form label,
+.contactUs form input,
+.contactUs form textarea,
+.contactUs form button {
+  display: block;
+  width: 90%;
+  margin: 0 auto;
+  font-size: 1.1em;
+  padding: 5px 0;
+}
 
-#contact .content .map iframe {
+.map {
+  width: 100%;
+}
+.map iframe {
   width: 100%;
 }
 
 /******************************************************************
 PAGINA PREGUNTAS FRECUENTES Content
 ******************************************************************/
-#qanda h2,
-#qanda section {
+.qanda {
+  width: 90%;
+  margin: 10px 0;
+  padding: 0 5%;
+}
+.qanda h2 {
+  margin: 20px 0;
+  font-size: 1.5em;
+}
+.qanda .question {
+  border-radius: 5px;
   width: 95%;
-  margin: 0 auto;
+  margin: 20px 0;
+  padding: 5px 2.5%;
+  background-color: rgb(212, 212, 212);
 }
-
-#qanda h2 {
-  margin: 5% 0;
-  font-size: 8vw;
-  text-align: center;
-  /* margin: 5% 0; */
+.qanda .question h3 {
+  font-size: 1.3em;
+  margin: 10px 0;
 }
-
-/* #qanda section{
-    background-color: aquamarine;
-} */
-#qanda section article h3 {
-  padding: 2% 3%;
-  border-radius: 5px 5px 0 0;
-  font-size: 5vw;
-  background-color: lightgrey;
-}
-
-#qanda section article p {
-  max-height: 0px;
-  visibility: hidden;
-  background-color: rgba(255, 226, 167, 0.521);
-  border: 1px solid lightgrey;
-  border-top: 0;
-}
-
-#qanda section article:target p {
-  min-height: 100px;
-  max-height: 100%;
-  visibility: visible;
-  padding: 3% 3%;
+.qanda .question p {
+  font-size: 1.1em;
+  margin: 15px 0;
+  line-height: 23px;
+  letter-spacing: 1px;
 }
 
 /******************************************************************
@@ -581,10 +555,261 @@ footer {
   text-align: center;
   letter-spacing: 0.7vw;
   text-shadow: 0 0 20px black;
-  background-color: rgb(47, 82, 100);
+  background-color: rgb(0, 98, 245);
+}
+footer .suscribe-form {
+  margin: 10px 0;
+}
+footer .copyright {
+  margin: 10px 0;
+  width: 100%;
+}
+footer .socials {
+  margin: 10px 0;
+  width: 100%;
+}
+footer .socials a {
+  margin: 0 7px;
+  font-size: 1.5em;
+  color: black;
+  text-decoration: none;
 }
 
-/* @import 'tablet.scss';
-@import 'desktop.scss'; */
+/* TABLET */
+@media (min-width: 481px) {
+  /******************************************************************
+  Ajustes Generales
+  ******************************************************************/
+  /* Encabezado */
+  header h1 {
+    font-size: 2.5em;
+  }
+  header nav ul {
+    top: 80px;
+  }
+  header nav ul li {
+    font-size: 3em;
+  }
+
+  /******************************************************************
+  PAGINA PRINCIPAL Content
+  ******************************************************************/
+  /* Main Ad*/
+  .mainad {
+    max-height: 500px;
+  }
+  .mainad::before {
+    content: "";
+    max-height: 500px;
+  }
+  .mainad h2 {
+    font-size: 2em;
+  }
+  .mainad p {
+    font-size: 1.3em;
+  }
+
+  /* Galeria */
+  .gallery h2 {
+    font-size: 2.5em;
+  }
+  .gallery article {
+    width: 30%;
+  }
+
+  #index .gallery {
+    flex-wrap: wrap;
+  }
+
+  /******************************************************************
+  PAGINA TIENDA Content
+  ******************************************************************/
+  /*Anuncio*/
+  .sliders {
+    max-height: 500px;
+  }
+  .sliders .sliderItems .sliderItem img {
+    height: 100%;
+  }
+
+  /*Articulos de la Tienda*/
+  .purchaseItems .nav-search form .search-bar {
+    width: 70%;
+  }
+  .purchaseItems .nav-search form .search-bar input[type=search] {
+    width: 87.5%;
+  }
+  .purchaseItems .nav-search form .search-bar button {
+    width: 12.5%;
+  }
+  .purchaseItems .nav-search form .filterSection label {
+    width: 40%;
+  }
+  .purchaseItems article {
+    width: 30%;
+    max-height: 375px;
+  }
+
+  /******************************************************************
+  PAGINA NOSOTROS Content
+  ******************************************************************/
+  /* articles */
+  .sections .article h2 {
+    margin: 25px 0;
+    font-size: 1.7em;
+  }
+  .sections .article p {
+    font-size: 1.3em;
+    letter-spacing: 1px;
+    line-height: 25px;
+  }
+
+  /******************************************************************
+  PAGINA PREGUNTAS FRECUENTES Content
+  ******************************************************************/
+  .qanda h2 {
+    font-size: 2em;
+  }
+  .qanda .questions .question h3 {
+    font-size: 1.7em;
+  }
+  .qanda .questions .question p {
+    font-size: 1.3em;
+  }
+}
+/* DESKTOP */
+@media (min-width: 1024px) {
+  /******************************************************************
+  Ajustes Generales
+  ******************************************************************/
+  body {
+    grid-template-areas: "head head head" ". content ." "pie pie pie";
+    grid-template-columns: 1fr 8fr 1fr;
+  }
+
+  /* Encabezado */
+  header h1 {
+    width: 40%;
+  }
+  header nav {
+    width: 35%;
+    display: block;
+  }
+  header nav label {
+    display: none;
+  }
+  header nav ul {
+    background-color: rgba(255, 255, 255, 0);
+    display: flex;
+    justify-content: space-between;
+    position: static;
+    flex-wrap: nowrap;
+    width: 100%;
+    height: 35px;
+  }
+  header nav ul li {
+    display: inline-block;
+    height: 100%;
+    border-radius: 4px;
+    background-color: rgb(233, 151, 0);
+  }
+  header nav ul li a {
+    margin: 0;
+    padding: 0px;
+  }
+  header nav ul li a p {
+    width: 100%;
+    padding: 10px 10px 0 10px;
+    text-align: left;
+    font-size: 0.3em;
+  }
+
+  .container {
+    width: 100%;
+  }
+
+  /******************************************************************
+  PAGINA PRINCIPAL Content
+  ******************************************************************/
+  .mainad::before {
+    width: 80vw;
+  }
+
+  /******************************************************************
+  PAGINA TIENDA Content
+  ******************************************************************/
+  /*Articulos de la Tienda*/
+  .purchaseItems .nav-search form .search-bar {
+    width: 50%;
+  }
+  .purchaseItems .nav-search form .filterSection label {
+    width: 28%;
+  }
+  .purchaseItems article {
+    width: 20%;
+    max-height: 300px;
+  }
+
+  /******************************************************************
+  PAGINA NOSOTROS Content
+  ******************************************************************/
+  .reachUs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .reachUs .contactUs, .reachUs .map {
+    display: block;
+    width: 45%;
+  }
+  .reachUs .contactUs h2, .reachUs .map h2 {
+    font-size: 3em;
+  }
+
+  /******************************************************************
+  PAGINA PREGUNTAS FRECUENTES Content
+  ******************************************************************/
+  #qanda h2 {
+    font-size: 5vw;
+    text-align: left;
+    margin: 5% auto 5% auto;
+  }
+
+  #qanda section article h3 {
+    font-size: 3vw;
+  }
+
+  #qanda section article p {
+    font-size: 1.5vw;
+  }
+
+  /******************************************************************
+  FOOTER
+  ******************************************************************/
+  footer {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  footer .suscribe-form {
+    width: 30%;
+  }
+  footer .copyright {
+    width: 40%;
+  }
+  footer .socials {
+    width: 30%;
+  }
+}
+/* General Desing*/
+/* .btn{
+    padding: 0 5px;
+    height: 32.5px;
+    background-color: orange;
+    border-radius: 5px;
+    border: none;
+    i{
+        padding: 100%;
+    }
+} */
 
 /*# sourceMappingURL=main.css.map */
