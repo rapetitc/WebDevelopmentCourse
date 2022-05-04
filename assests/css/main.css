@@ -183,7 +183,7 @@ PAGINA PRINCIPAL Content
 ******************************************************************/
 /* Main Ad*/
 .mainad {
-  background: no-repeat center url(../assests/media/mainad.gif);
+  background: no-repeat center url(../media/mainad.gif);
   background-size: cover;
   width: 100%;
   height: 55vw;
