@@ -1,0 +1,53 @@
+@mixin presentation {
+    background-color: red;
+    height: 500px;
+    &::after{
+        content: '';
+        display: block;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        top: -200%;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 1;
+    }
+    .preImg{
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        img{
+            min-width: 100%;
+            min-height: 100%;
+        }
+    }
+    .preDesc{
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        top: -100%;
+        left: 0;
+        z-index: 2;
+        color: white;
+        h2{
+            font-size: 2.5em;
+            padding: 0 20px;
+            height: 50%;
+            width: 100%;
+            text-align: center;
+        }
+        p{
+            font-size: 1.5em;
+            width: 100%;
+            text-align: right;
+            padding: 0 20px;
+        }
+    }
+}
+
+.presentation{
+    @include presentation;
+}

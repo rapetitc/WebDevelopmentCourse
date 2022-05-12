@@ -4,44 +4,27 @@ body {
   background-image: url(../media/background.jpg);
   background-repeat: no-repeat;
   background-repeat: round;
-  display: grid;
 }
 
 /******************************************************************
 Ajustes Generales
 ******************************************************************/
-/* AREAS */
-header {
-  grid-area: head;
-}
-
+/* Ajustes Generales */
+/* Colores */
+/* Theme adjust */
 .container {
-  grid-area: content;
-}
-
-footer {
-  grid-area: pie;
-}
-
-/* MAIN */
-.container {
-  background-color: rgb(255, 255, 255);
+  width: 100%;
   min-height: 100vh;
+  margin: 0 auto;
+  background-color: #fff;
 }
 
-/* Template para las grids de desktop*/
-/* body{
-
-    grid-template-areas: 
-        "head head head"
-        ". content ."
-        "pie pie pie"
-    ;
-    grid-template-columns: 1fr  8fr 1fr;
-} */
-/******************************************************************
-RESPONSIVE DESING
-******************************************************************/
+@media (min-width: 1024px) {
+  .container {
+    width: 80%;
+  }
+}
+/* General settings */
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -96,720 +79,712 @@ table {
   border-spacing: 0;
 }
 
-/* MOBILE */
-/******************************************************************
-Ajustes Generales
-******************************************************************/
-body {
-  grid-template-areas: "head" "content" "pie";
-  grid-template-columns: 1fr;
+/* Templates */
+.nav-bar {
+  margin: 0;
+  width: 100%;
+  height: 75px;
+  background-color: #0d6efd;
+  display: flex;
+  /* flex */
+  flex-wrap: nowrap;
+  justify-content: space-between;
 }
-
-/* Encabezado */
-header {
-  height: 15vw;
-  max-height: 80px;
+.nav-bar .nav-logo {
+  height: 60%;
+  width: 20%;
+  display: flex;
+  align-self: center;
+  justify-content: start;
+}
+.nav-bar .nav-logo img {
+  height: 100%;
+}
+.nav-bar .nav-title {
+  width: 80%;
+  height: 100%;
+  font-size: 2em;
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  background-color: rgb(0, 98, 245);
+  justify-content: center;
 }
-header a {
-  margin: 0 2.5%;
-  height: 60%;
-}
-header a .logo {
-  height: 100%;
-}
-header h1 {
-  width: 80%;
-  text-align: center;
-  font-size: 1.8em;
-  letter-spacing: 0.3vw;
-}
-header h1 a {
+.nav-bar .nav-title a {
+  color: #000;
   text-decoration: none;
-  color: white;
 }
-header nav {
-  text-align: center;
+.nav-bar .nav-menu {
   width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-header nav label {
-  font-size: 2rem;
-  background-color: rgb(233, 151, 0);
-  border: 1px solid rgb(177, 177, 177);
-  padding: 5px 10px;
+.nav-bar .nav-menu .menu-control {
+  font-size: 2em;
+  border: 1px solid lightgray;
+  padding: 3px 8px;
   border-radius: 5px;
+  background-color: #fd7e14;
 }
-header nav label:active {
-  background-color: rgb(182, 118, 1);
-}
-header nav input {
+.nav-bar .nav-menu #menu-control {
   display: none;
 }
-header nav ul {
-  z-index: 10;
-  background-color: rgb(233, 151, 0);
+.nav-bar .nav-menu .menu {
   display: none;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
   position: absolute;
+  top: 75px;
   left: 0;
-  top: 15vw;
+  z-index: 10;
+  width: 100%;
+  background-color: #fd7e14;
+}
+.nav-bar .nav-menu .menu li {
   width: 100%;
 }
-header nav ul li {
-  list-style: none;
-  font-size: 1.5rem;
+.nav-bar .nav-menu .menu li a {
+  margin: 20px;
+  display: block;
   text-align: center;
-}
-header nav ul li:hover {
-  background-color: rgb(182, 118, 1);
-}
-header nav ul li a {
+  font-size: 2em;
+  color: #000;
   text-decoration: none;
-  color: white;
 }
-header nav ul li a p {
-  padding: 1px 0;
-  width: 100%;
+.nav-bar .nav-menu .menu li a:hover {
+  color: #495057;
 }
-
-input#menuBtn:checked ~ ul#menu {
-  display: inline;
-}
-
-/******************************************************************
-PAGINA PRINCIPAL Content
-******************************************************************/
-/* Main Ad*/
-.mainad {
-  background: no-repeat center url(../media/mainad.gif);
-  background-size: cover;
-  width: 100%;
-  height: 55vw;
+.nav-bar input#menu-control:checked ~ .menu {
   display: flex;
-  flex-wrap: wrap;
 }
-.mainad::before {
+@media (min-width: 481px) {
+  .nav-bar .nav-logo {
+    height: 70%;
+    justify-content: center;
+  }
+  .nav-bar .nav-title {
+    font-size: 3em;
+  }
+  .nav-bar .nav-menu .menu li a {
+    margin: 15px;
+  }
+}
+@media (min-width: 1024px) {
+  .nav-bar .nav-title {
+    width: 20%;
+    justify-content: start;
+  }
+  .nav-bar .nav-menu {
+    width: 180%;
+  }
+  .nav-bar .nav-menu .menu-control {
+    display: none;
+  }
+  .nav-bar .nav-menu .menu {
+    justify-content: end;
+    background-color: rgba(255, 0, 0, 0);
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    top: auto;
+    left: auto;
+  }
+  .nav-bar .nav-menu .menu li {
+    border-radius: 5px;
+    background-color: #fd7e14;
+    margin: 0 1%;
+    width: auto;
+  }
+  .nav-bar .nav-menu .menu li:last-child {
+    margin-right: 3%;
+  }
+  .nav-bar .nav-menu .menu li a {
+    font-size: 1em;
+  }
+}
+
+.presentation {
+  background-color: red;
+  height: 500px;
+}
+.presentation::after {
   content: "";
-  position: absolute;
-  width: 100%;
-  height: 55vw;
-  background-color: rgba(0, 0, 0, 0.616);
-}
-.mainad p, .mainad h2 {
-  z-index: 2;
-}
-.mainad h2 {
-  width: 95%;
-  padding: 2.5%;
-  align-self: center;
-  color: white;
-  font-size: 1.5em;
-  text-align: center;
-  border-radius: 50px;
-}
-.mainad p {
-  align-self: flex-end;
-  padding: 5%;
-  color: white;
-  text-align: end;
-}
-
-.gallery {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 0 1%;
-}
-.gallery h2 {
-  font-size: 1.5em;
-  width: 100%;
-  margin: 2vw 0;
-  text-align: center;
-}
-.gallery h2::after {
-  content: "-------------------------------------";
   display: block;
-}
-.gallery h2::before {
-  content: "-------------------------------------";
-  display: block;
-}
-.gallery article {
-  width: 45%;
-  margin: 2vw auto;
-}
-.gallery article img {
-  transition: 0.5s;
+  position: relative;
   width: 100%;
+  height: 100%;
+  top: -200%;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
 }
-.gallery article img:hover {
-  scale: 1.1;
-  border-radius: 10px;
-  box-shadow: 0 0 50px black;
-}
-
-/******************************************************************
-PAGINA TIENDA Content
-******************************************************************/
-/*Anuncio*/
-.sliders {
+.presentation .preImg {
+  width: 100%;
+  height: 100%;
   overflow: hidden;
 }
-.sliders .sliderItems {
-  animation: sliderControl 10s infinite ease;
-  width: 200%;
-  height: 50vw;
+.presentation .preImg img {
+  min-width: 100%;
+  min-height: 100%;
+}
+.presentation .preDesc {
   display: flex;
-  flex-wrap: nowrap;
-}
-.sliders .sliderItems .sliderItem {
+  flex-wrap: wrap;
+  align-content: center;
+  position: relative;
   width: 100%;
   height: 100%;
+  top: -100%;
+  left: 0;
+  z-index: 2;
+  color: white;
 }
-.sliders .sliderItems .sliderItem img {
+.presentation .preDesc h2 {
+  font-size: 2.5em;
+  padding: 0 20px;
+  height: 50%;
   width: 100%;
-  height: 100%;
+  text-align: center;
+}
+.presentation .preDesc p {
+  font-size: 1.5em;
+  width: 100%;
+  text-align: right;
+  padding: 0 20px;
 }
 
-@keyframes sliderControl {
-  5% {
+.footer {
+  padding: 10px 0;
+  width: 100%;
+  min-height: 75px;
+  background-color: #0d6efd;
+  display: flex;
+  /* flex */
+  flex-wrap: wrap;
+  align-items: center;
+}
+.footer .subscribeForm {
+  width: 100%;
+}
+.footer .subscribeForm form {
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+}
+.footer .subscribeForm form input {
+  width: 50%;
+  height: 20px;
+  margin-right: 1%;
+  border-radius: 5px;
+}
+.footer .subscribeForm form button {
+  background-color: orange;
+  width: 30%;
+  border-radius: 5px;
+}
+.footer .copyright {
+  width: 200%;
+  font-size: 1.1em;
+  text-align: center;
+}
+.footer .copyright span {
+  font-size: 0.9em;
+  color: rebeccapurple;
+}
+.footer .socials {
+  width: 100%;
+}
+.footer .socials ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.footer .socials ul li {
+  margin: 3%;
+  font-size: 2em;
+}
+.footer .socials ul li a {
+  color: #000;
+  text-decoration: none;
+}
+.footer .socials ul li a:hover {
+  color: lightgray;
+}
+@media (min-width: 481px) {
+  .footer .subscribeForm form input {
+    width: 45%;
+  }
+  .footer .subscribeForm form button {
+    width: 20%;
+  }
+}
+@media (min-width: 1024px) {
+  .footer {
+    flex-wrap: nowrap;
+  }
+  .footer .subscribeForm form input {
+    width: 55%;
+  }
+  .footer .subscribeForm form button {
+    width: 35%;
+  }
+}
+
+/* Cuantos Sliders Tiene Tu Web?*/
+@keyframes slideAnimation {
+  0% {
     margin-left: 0;
   }
-  45% {
+  10% {
     margin-left: 0;
-  }
-  50% {
-    margin-left: -100%;
   }
   95% {
     margin-left: -100%;
   }
+  100% {
+    margin-left: -100%;
+  }
 }
-/*Barra de Busqueda*/
-.purchaseItems {
-  display: flex;
-  flex-wrap: wrap;
-  /*Articulos de la Tienda*/
-}
-.purchaseItems .nav-search {
-  /* background-color: gray; */
-  margin: 20px 0;
+.sliders {
+  /* display: none; */
+  margin: 0 auto;
+  overflow: hidden;
   width: 100%;
+  max-width: 1280px;
+  height: 35vw;
+  min-height: 300px;
+  max-height: 500px;
+  background-color: white;
+}
+.sliders ul {
   display: flex;
-  justify-content: space-evenly;
-}
-.purchaseItems .nav-search form {
-  display: flex;
-  justify-content: space-evenly;
-  /* background-color: red; */
-  padding: 0 5%;
-  width: 90%;
-  height: 35px;
-}
-.purchaseItems .nav-search form .search-bar {
-  background-color: rgb(255, 255, 255);
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  width: 80%;
-  border: 1px solid gold;
-  border-radius: 5px;
-}
-.purchaseItems .nav-search form .search-bar input[type=search] {
-  width: 80%;
-  padding-left: 10px;
-  border-radius: 5px 0 0 5px;
-}
-.purchaseItems .nav-search form .search-bar input[type=search]:focus {
-  border: none;
-}
-.purchaseItems .nav-search form .search-bar button {
-  border-radius: 0 5px 5px 0;
-  width: 20%;
-  background-color: rgb(233, 151, 0);
-}
-.purchaseItems .nav-search form .search-bar input[type=search],
-.purchaseItems .nav-search form .search-bar button {
-  border: none;
-}
-.purchaseItems .nav-search form .filterSection {
-  width: 20%;
+  animation: slideAnimation 5s infinite ease-out;
+  width: 300%;
+  height: 100%;
   /* background-color: aqua; */
 }
-.purchaseItems .nav-search form .filterSection label {
+.sliders ul li {
   display: block;
-  width: 70%;
-  margin: 0 15%;
+  width: 100%;
   height: 100%;
-  border-radius: 5px;
-  background-color: rgb(233, 151, 0);
 }
-.purchaseItems .nav-search form .filterSection label i {
-  margin: 10.5px 33.5%;
-}
-.purchaseItems .nav-search form #filterSearch {
-  display: none;
-}
-.purchaseItems .nav-search form .filterSelection {
-  display: none;
-  position: fixed;
-  background-color: rgba(228, 228, 228, 0.3);
-  width: 100vw;
-  height: 100vh;
-  left: 0;
-  top: 0;
-}
-.purchaseItems .nav-search form .filterSelection .contentFilter {
-  display: inline;
-  position: absolute;
-  width: 100vw;
-  height: 50vh;
-  bottom: 0;
-  background-color: rgb(0, 98, 245);
-  border-radius: 10px 10px 0 0;
-}
-.purchaseItems .nav-search form .filterSelection .contentFilter label.btn {
-  margin: 0;
-  width: 35px;
-  height: 35px;
-  display: inline;
-  position: absolute;
-  right: 5px;
-  top: 5px;
-}
-.purchaseItems .nav-search form .filterSelection .contentFilter h3 {
-  font-size: 1.3em;
-  text-align: center;
-  margin: 15px 0;
-}
-.purchaseItems .nav-search form .filterSelection .contentFilter .filterValues {
-  background-color: rgba(235, 235, 235, 0.904);
+.sliders ul li img {
   display: block;
-  width: 90%;
-  min-height: 100%;
-  overflow-y: scroll;
-  padding: 10px 5%;
-}
-.purchaseItems .nav-search form .filterSelection .contentFilter .filterValues .filter {
-  margin: 25px 0;
-}
-.purchaseItems .nav-search form .filterSelection .contentFilter .filterValues h4 {
-  padding-left: 15px;
-  padding-bottom: 5px;
-  font-size: 1.2em;
-  margin: 15px 0;
-  border-bottom: 1px solid black;
-}
-.purchaseItems .nav-search form .filterSelection .contentFilter .filterValues label {
-  display: inline;
-  margin: 0;
-  background-color: rgba(255, 255, 255, 0);
-}
-.purchaseItems input#filterSearch:checked ~ .filterSelection {
-  display: inline;
-}
-.purchaseItems article {
-  transition: box-shadow 0.3s;
-  width: 45%;
-  height: 60vw;
-  background-color: rgb(255, 255, 255);
-  margin: 2vw auto;
-  display: flex;
-  flex-wrap: wrap;
-  border: 1px lightgray solid;
-  border-radius: 3px;
-}
-.purchaseItems article:hover {
-  box-shadow: 0px 0px 5px black;
-  scale: 1.01;
-}
-.purchaseItems article .articleImg {
   width: 100%;
-  height: 80%;
-  border-bottom: 1px solid rgb(131, 131, 131);
+  height: 100%;
 }
-.purchaseItems article img {
+.sliders ul li p {
   display: block;
-  margin: 0 auto;
-  max-height: 100%;
-  max-width: 100%;
-  transition: 0.5s;
-}
-.purchaseItems article img:hover {
-  scale: 1.05;
-  cursor: pointer;
-}
-.purchaseItems article .description {
-  padding: 5px;
-  width: 75%;
-}
-.purchaseItems article button {
-  width: 19%;
-  height: 18%;
-}
-
-/******************************************************************
-PAGINA NOSOTROS Content
-******************************************************************/
-.sections {
-  width: 95%;
-  padding: 2.5%;
-  margin: 10px auto;
-  display: flex;
-  flex-wrap: wrap;
-}
-.sections .article {
-  width: 100%;
-}
-.sections .article h2 {
-  margin: 10px auto;
+  position: relative;
+  bottom: 50px;
+  font-size: 2em;
   text-align: center;
-  font-size: 1.5em;
-}
-.sections .article img {
-  width: 50%;
-  margin: 5px 10px;
-}
-.sections .article p {
-  padding: 5;
-  text-align: justify;
-}
-
-/******************************************************************
-PAGINA CONTACTO Content
-******************************************************************/
-.contactUs,
-.map {
-  margin: 50px 0;
-}
-
-.contactUs h2,
-.map h2 {
-  font-size: 10vw;
-  text-align: center;
-  margin: 3% 0;
-}
-
-.contactUs {
-  width: 100%;
-}
-.contactUs form {
-  width: 100%;
-}
-.contactUs form label,
-.contactUs form input,
-.contactUs form textarea,
-.contactUs form button {
-  display: block;
-  width: 90%;
-  margin: 0 auto;
-  font-size: 1.1em;
-  padding: 5px 0;
-}
-
-.map {
-  width: 100%;
-}
-.map iframe {
-  width: 100%;
-}
-
-/******************************************************************
-PAGINA PREGUNTAS FRECUENTES Content
-******************************************************************/
-.qanda {
-  width: 90%;
-  margin: 10px 0;
-  padding: 0 5%;
-}
-.qanda h2 {
-  margin: 20px 0;
-  font-size: 1.5em;
-}
-.qanda .question {
-  border-radius: 5px;
-  width: 95%;
-  margin: 20px 0;
-  padding: 5px 2.5%;
-  background-color: rgb(212, 212, 212);
-}
-.qanda .question h3 {
-  font-size: 1.3em;
-  margin: 10px 0;
-}
-.qanda .question p {
-  font-size: 1.1em;
-  margin: 15px 0;
-  line-height: 23px;
-  letter-spacing: 1px;
-}
-
-/******************************************************************
-Ajustes Generales
-******************************************************************/
-footer {
-  width: 100%;
-  padding: 10px 0;
+  text-shadow: 0 0 10px black;
   color: white;
+}
+.gallery {
+  display: block;
+  /* block */
+  padding: 15px 0;
+  width: 100%;
+}
+.gallery h2 {
   text-align: center;
-  letter-spacing: 0.7vw;
-  text-shadow: 0 0 20px black;
-  background-color: rgb(0, 98, 245);
+  font-size: 2.5em;
+  margin: 20px;
 }
-footer .suscribe-form {
-  margin: 10px 0;
-}
-footer .copyright {
-  margin: 10px 0;
+.gallery .galleryItems {
   width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
 }
-footer .socials {
-  margin: 10px 0;
-  width: 100%;
+.gallery .galleryItems .galleryItem {
+  margin: 0.5% 0;
+  display: flex;
+  overflow: hidden;
+  width: 48%;
+  max-height: 350px;
 }
-footer .socials a {
-  margin: 0 7px;
-  font-size: 1.5em;
-  color: black;
-  text-decoration: none;
+.gallery .galleryItems .galleryItem img {
+  display: block;
+  margin: auto;
+  max-width: 100%;
+  max-height: 100%;
 }
-
-/* TABLET */
 @media (min-width: 481px) {
-  /******************************************************************
-  Ajustes Generales
-  ******************************************************************/
-  /* Encabezado */
-  header h1 {
-    font-size: 2.5em;
+  .gallery .galleryItems .galleryItem {
+    width: 32%;
   }
-  header nav ul {
-    top: 80px;
+}
+@media (min-width: 1024px) {
+  .gallery .galleryItems .galleryItem {
+    width: 24%;
   }
-  header nav ul li {
-    font-size: 3em;
-  }
+}
 
-  /******************************************************************
-  PAGINA PRINCIPAL Content
-  ******************************************************************/
-  /* Main Ad*/
-  .mainad {
-    max-height: 500px;
+.store {
+  /* display: none; */
+  padding: 15px 0;
+  /* background-color: red; */
+}
+.store .nav-search {
+  margin: 10px 0;
+  width: 100%;
+}
+.store .nav-search form {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: nowrap;
+  width: 100%;
+  column-gap: 10px;
+}
+.store .nav-search form input[type=search] {
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  padding: 5px 7px;
+  background-color: orange;
+  width: 50%;
+  background-color: rgba(0, 0, 0, 0);
+}
+.store .nav-search form button,
+.store .nav-search form .controlFilter {
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  padding: 5px 7px;
+  background-color: orange;
+}
+.store .nav-search form input#controlFilter {
+  display: none;
+}
+.store .nav-search form input#controlFilter:checked ~ .filters {
+  display: block;
+}
+.store .nav-search form .filters {
+  display: none;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: fixed;
+  width: 100%;
+  height: 50vh;
+  z-index: 5;
+  left: 0;
+  bottom: 0;
+  background-color: rgb(255, 255, 255);
+}
+.store .nav-search form .filters .controlFilter {
+  display: block;
+  position: absolute;
+  right: 20px;
+  top: 10px;
+}
+.store .nav-search form .filters h3 {
+  text-align: center;
+  font-size: 1.2em;
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px 0;
+}
+.store .nav-search form .filters .filterSelection {
+  padding: 5px 15px;
+}
+.store .nav-search form .filters .filterSelection .filter {
+  margin: 20px auto;
+  width: 90%;
+}
+.store .nav-search form .filters .filterSelection .filter h4 {
+  padding: 10px 30px;
+  font-size: 1.1em;
+}
+.store .nav-search form .filters .filterSelection .filter input[type=range] {
+  width: 100%;
+}
+.store .articles {
+  width: 100%;
+  margin: 20px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  row-gap: 50px;
+}
+.store .articles .article {
+  /* 
+  border: 1px solid lightgray; */
+  cursor: pointer;
+  border-radius: 5px;
+  min-width: 200px;
+  width: 48%;
+  max-width: 250px;
+  min-height: 300px;
+}
+.store .articles .article:hover .articleDescription {
+  border: 1px solid lightgray;
+  /* background-color: aquamarine; */
+  /* height: 30%; */
+}
+.store .articles .article .articleImg {
+  border-radius: 5px 5px 0 0;
+  background-color: rgb(235, 235, 235);
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  height: 250px;
+}
+.store .articles .article .articleImg img {
+  display: block;
+  margin: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+.store .articles .article .articleDescription {
+  border: 1px solid lightgray;
+  padding: 3% 3%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 0 0 5px 5px;
+  /* background-color: wheat; */
+  height: 20%;
+}
+.store .articles .article .articleDescription h3 {
+  width: 100%;
+  /* background-color: red; */
+  display: inline;
+  margin: 5% 0;
+  font-size: 1.4em;
+  height: 20%;
+  white-space: nowrap;
+  text-overflow: clip;
+}
+.store .articles .article .articleDescription p {
+  /* background-color: aqua; */
+  color: black;
+  font-size: 1.4em;
+  margin: 5% 0;
+  height: 45%;
+  white-space: nowrap;
+  text-overflow: clip;
+}
+.store .articles .article .articleDescription p span {
+  font-size: 0.7em;
+  color: green;
+  text-decoration: line-through;
+}
+@media (min-width: 481px) {
+  .store {
+    /* .articles{
+        .article{
+            width: 31%;
+        }
+    } */
   }
-  .mainad::before {
-    content: "";
-    max-height: 500px;
-  }
-  .mainad h2 {
-    font-size: 2em;
-  }
-  .mainad p {
-    font-size: 1.3em;
-  }
-
-  /* Galeria */
-  .gallery h2 {
-    font-size: 2.5em;
-  }
-  .gallery article {
-    width: 30%;
-  }
-
-  #index .gallery {
+  .store .nav-search form {
+    display: flex;
     flex-wrap: wrap;
   }
-
-  /******************************************************************
-  PAGINA TIENDA Content
-  ******************************************************************/
-  /*Anuncio*/
-  .sliders {
-    max-height: 500px;
+  .store .nav-search form .filters {
+    background-color: lightgray;
+    display: none;
+    position: static;
+    width: 100%;
+    height: auto;
+    margin: 10px 0;
+    padding: 0;
   }
-  .sliders .sliderItems .sliderItem img {
-    height: 100%;
-  }
-
-  /*Articulos de la Tienda*/
-  .purchaseItems .nav-search form .search-bar {
-    width: 70%;
-  }
-  .purchaseItems .nav-search form .search-bar input[type=search] {
-    width: 87.5%;
-  }
-  .purchaseItems .nav-search form .search-bar button {
-    width: 12.5%;
-  }
-  .purchaseItems .nav-search form .filterSection label {
-    width: 40%;
-  }
-  .purchaseItems article {
-    width: 30%;
-    max-height: 375px;
-  }
-
-  /******************************************************************
-  PAGINA NOSOTROS Content
-  ******************************************************************/
-  /* articles */
-  .sections .article h2 {
-    margin: 25px 0;
-    font-size: 1.7em;
-  }
-  .sections .article p {
-    font-size: 1.3em;
-    letter-spacing: 1px;
-    line-height: 25px;
-  }
-
-  /******************************************************************
-  PAGINA PREGUNTAS FRECUENTES Content
-  ******************************************************************/
-  .qanda h2 {
-    font-size: 2em;
-  }
-  .qanda .questions .question h3 {
-    font-size: 1.7em;
-  }
-  .qanda .questions .question p {
-    font-size: 1.3em;
-  }
-}
-/* DESKTOP */
-@media (min-width: 1024px) {
-  /******************************************************************
-  Ajustes Generales
-  ******************************************************************/
-  body {
-    grid-template-areas: "head head head" ". content ." "pie pie pie";
-    grid-template-columns: 1fr 8fr 1fr;
-  }
-
-  /* Encabezado */
-  header h1 {
-    width: 40%;
-  }
-  header nav {
-    width: 35%;
-    display: block;
-  }
-  header nav label {
+  .store .nav-search form .filters h3 {
     display: none;
   }
-  header nav ul {
-    background-color: rgba(255, 255, 255, 0);
+  .store .nav-search form .filters .filterSelection {
     display: flex;
-    justify-content: space-between;
-    position: static;
-    flex-wrap: nowrap;
-    width: 100%;
-    height: 35px;
   }
-  header nav ul li {
-    display: inline-block;
-    height: 100%;
-    border-radius: 4px;
-    background-color: rgb(233, 151, 0);
-  }
-  header nav ul li a {
-    margin: 0;
-    padding: 0px;
-  }
-  header nav ul li a p {
-    width: 100%;
-    padding: 10px 10px 0 10px;
-    text-align: left;
-    font-size: 0.3em;
-  }
-
-  .container {
-    width: 100%;
-  }
-
-  /******************************************************************
-  PAGINA PRINCIPAL Content
-  ******************************************************************/
-  .mainad::before {
-    width: 80vw;
-  }
-
-  /******************************************************************
-  PAGINA TIENDA Content
-  ******************************************************************/
-  /*Articulos de la Tienda*/
-  .purchaseItems .nav-search form .search-bar {
-    width: 50%;
-  }
-  .purchaseItems .nav-search form .filterSection label {
-    width: 28%;
-  }
-  .purchaseItems article {
-    width: 20%;
-    max-height: 300px;
-  }
-
-  /******************************************************************
-  PAGINA NOSOTROS Content
-  ******************************************************************/
-  .reachUs {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-  }
-  .reachUs .contactUs, .reachUs .map {
-    display: block;
-    width: 45%;
-  }
-  .reachUs .contactUs h2, .reachUs .map h2 {
-    font-size: 3em;
-  }
-
-  /******************************************************************
-  PAGINA PREGUNTAS FRECUENTES Content
-  ******************************************************************/
-  #qanda h2 {
-    font-size: 5vw;
-    text-align: left;
-    margin: 5% auto 5% auto;
-  }
-
-  #qanda section article h3 {
-    font-size: 3vw;
-  }
-
-  #qanda section article p {
-    font-size: 1.5vw;
-  }
-
-  /******************************************************************
-  FOOTER
-  ******************************************************************/
-  footer {
-    display: flex;
-    flex-wrap: nowrap;
-  }
-  footer .suscribe-form {
-    width: 30%;
-  }
-  footer .copyright {
-    width: 40%;
-  }
-  footer .socials {
-    width: 30%;
+  .store .nav-search form .filters .filterSelection .filter {
+    margin: 0 10px;
   }
 }
-/* General Desing*/
-/* .btn{
-    padding: 0 5px;
-    height: 32.5px;
-    background-color: orange;
-    border-radius: 5px;
-    border: none;
-    i{
-        padding: 100%;
-    }
-} */
+@media (min-width: 1024px) {
+  .store {
+    /* .articles{
+        .article{
+            width: 23.2%;
+        }
+    } */
+  }
+}
+
+.contactForm {
+  /* display: none; */
+  /* just comment */
+  width: 100%;
+  padding: 10px 0;
+}
+.contactForm form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.contactForm form label, .contactForm form input, .contactForm form textarea, .contactForm form button {
+  display: block;
+  width: 90%;
+  margin-top: 7px;
+}
+.information {
+  padding: 10px 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  row-gap: 10px;
+}
+.information .article {
+  padding: 10px;
+  width: 100%;
+}
+.information .article h2 {
+  font-size: 2em;
+  text-align: center;
+  margin: 15px 0;
+}
+.information .article img {
+  display: block;
+  position: static;
+  max-height: 300px;
+  max-width: 95%;
+  margin: 5px auto;
+}
+.information .article p {
+  font-size: 1.2em;
+  text-align: justify;
+}
+@media (min-width: 481px) {
+  .information .article {
+    width: 46%;
+  }
+  .information .article:last-child {
+    width: 94%;
+  }
+  .information .article:last-child img {
+    width: 80%;
+    max-width: 500px;
+    max-height: 400px;
+  }
+}
+@media (min-width: 1024px) {
+  .information .article {
+    width: 46%;
+  }
+  .information .article:last-child img {
+    float: left;
+    width: 50%;
+    margin: 1%;
+  }
+  .information .article img {
+    width: 100%;
+  }
+}
+
+.qanda {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 3% 5%;
+}
+.qanda .questions {
+  width: 100%;
+  border-radius: 10px;
+  padding: 2%;
+}
+.qanda .questions h2 {
+  text-align: center;
+  font-size: 2em;
+  padding: 30px 0;
+}
+.qanda .questions .question {
+  padding: 1% 2%;
+  background-color: rgb(233, 233, 233);
+  margin: 10px 0;
+}
+.qanda .questions .question h3 {
+  font-size: 1.5em;
+  padding: 10px;
+}
+.qanda .questions .question p {
+  font-size: 1.2em;
+}
+.qanda .qandaExtra {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.qanda .qandaExtra div {
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-around;
+}
+.qanda .qandaExtra div img {
+  max-width: 100%;
+  max-height: 100%;
+}
+@media (min-width: 481px) {
+  .qanda {
+    flex-wrap: nowrap;
+  }
+  .qanda .questions {
+    width: 50%;
+  }
+  .qanda .qandaExtra {
+    max-width: 50%;
+    display: flex;
+  }
+  .qanda .qandaExtra div {
+    display: flex;
+    align-content: space-around;
+  }
+  .qanda .qandaExtra div img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
+/******************************************************************
+Ajustes De Paginas
+******************************************************************/
+.contactUs {
+  width: 90%;
+  padding: 5%;
+  display: flex;
+  justify-content: space-around;
+  flex-flow: row wrap;
+}
+.contactUs .contactForm, .contactUs .map {
+  margin: 10px 0;
+  width: 100%;
+}
+.contactUs .contactForm h2, .contactUs .map h2 {
+  text-align: center;
+  font-size: 2em;
+  margin: 20px 0;
+}
+.contactUs .contactForm iframe, .contactUs .map iframe {
+  width: 100%;
+}
+.contactUs .contactForm p, .contactUs .map p {
+  margin: 20px 0;
+  font-size: 1.3em;
+}
+.contactUs .contactForm p i, .contactUs .map p i {
+  margin: 5px 15px 10px 0;
+}
+.contactUs .contactForm p a, .contactUs .map p a {
+  color: inherit;
+  text-decoration: none;
+}
+@media (min-width: 481px) {
+  .contactUs .contactForm, .contactUs .map {
+    width: 80%;
+  }
+}
+@media (min-width: 1024px) {
+  .contactUs .contactForm, .contactUs .map {
+    width: 45%;
+  }
+}
 
 /*# sourceMappingURL=main.css.map */

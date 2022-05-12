@@ -1,0 +1,131 @@
+@mixin navbar ($bc:$primary-bc,$bc2:$secundary-bc,$tc:$primary-tc){
+    margin: 0;
+    width: 100%;
+    height: 75px;
+    background-color: $bc;
+    display: flex;/* flex */
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    .nav-logo{
+        height: 60%;
+        width: 20%;
+        display: flex;
+        align-self: center;
+        justify-content: start;
+        img{
+            height: 100%;
+        }
+    }
+    .nav-title{
+        width: 80%;
+        height: 100%;
+        font-size: 2em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        a{
+            color: $tc;
+            text-decoration: none;
+        }
+    }
+    .nav-menu{
+        width: 20%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .menu-control{
+            font-size: 2em;
+            border: 1px solid lightgray ;
+            padding: 3px 8px;
+            border-radius: 5px;
+            background-color: $bc2;
+        }
+        #menu-control{
+            display: none;
+        }
+        .menu{
+            display: none;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top: 75px;
+            left: 0;
+            z-index: 10;
+            width: 100%;
+            background-color: $bc2;
+            li{
+                width: 100%;
+                a{
+                    margin: 20px;
+                    display: block;
+                    text-align: center;
+                    font-size: 2em;
+                    color: $tc;
+                    text-decoration: none;
+                    &:hover{
+                        color: $graydark;
+                    }
+                }
+            }
+        }
+    }
+    input#menu-control:checked ~ .menu{
+        display: flex;
+    }
+    @media (min-width: 481px){
+        .nav-logo{
+            height: 70%;
+            justify-content: center;
+        }
+        .nav-title{
+            font-size: 3em;
+        }
+        .nav-menu{
+            .menu{
+                li{
+                    a{
+                        margin: 15px;
+                    }
+                }
+            }
+        }
+    }
+    @media (min-width: 1024px){
+        .nav-title{
+            width: 20%;
+            justify-content: start;
+        }
+        .nav-menu{
+            width: 180%;
+            .menu-control{
+                display: none;
+            }
+            .menu{
+                justify-content: end;
+                background-color: rgba(255, 0, 0, 0);
+                display: flex;
+                flex-wrap: wrap;
+                position: relative;
+                top: auto;
+                left: auto;
+                li{
+                    border-radius: 5px;
+                    background-color: $bc2;
+                    margin: 0 1%;
+                    width: auto;
+                    &:last-child{
+                        margin-right: 3%;
+                    }
+                    a{
+                        font-size: 1em;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.nav-bar{
+    @include navbar;
+}

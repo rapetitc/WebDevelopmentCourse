@@ -4,8 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="assests/media/logo.png">
+    <link rel="icon" href="../assests/media/logo.png">
     <title>METALYPLAST</title>
+
+    <!-- SEO -->
+    <meta name="description" content="La mejores silas y mesas Tradicionales, Totalmente artesanales, hechas a mano que puedas encontrar en Bucaramanga y Colombia"/>
+    <meta name="keyboard" content="Sillas, Mesas, Artesanales, Hogar, Muebles, Mimbre, Bucaramanga">
+    <!-- SEO -->
 
     <!-- Andika Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,67 +28,76 @@
 </head>
 <body>
     <!-- Inicio de la barra de Navegacion -->
-    <header>
-        <a href="index.html">
-            <img src="../assests/media/logo.png" class="logo">
-        </a>
-        <h1><a href="index.html">METAL&PLAST</a></h1>
-        <nav>
-            <input type="checkbox" id="menuBtn">
-            <label for="menuBtn"><i class="fa-solid fa-bars"></i></label>
-            <ul id="menu">
-                <li><a href="../index.html"><p>Inicio</p></a></li>
-                <li><a href="store.html"><p>Tienda</p></a></li>
-                <li><a href="us.html"><p>Nosotros</p></a></li>
-                <li><a href="contact.html"><p>Contacto</p></a></li>
-                <li><a href="qanda.html"><p>Preguntas Frecuentes</p></a></li>
+    <div class="nav-bar">
+        <div class="nav-logo">
+            <a href="../index.html">
+                <img src="../assests/media/logo.png" class="METAL&PLAST">
+            </a>
+        </div>
+        <div class="nav-title">
+            <h1><a href="../index.html">METAL&PLAST</a></h1>
+        </div>
+        <nav class="nav-menu">
+            <label for="menu-control" class="menu-control"><i class="fa-solid fa-bars"></i></label>
+            <input type="checkbox" name="menu-control" id="menu-control">
+            <ul class="menu">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="store.html">Tienda</a></li>
+                <li><a href="us.html">Nosotros</a></li>
+                <li><a href="contact.html">Contacto</a></li>
+                <li><a href="qanda.html">Preguntas Frecuentes</a></li>
             </ul>
         </nav>
-    </header>
+    </div>
     <!-- Fin de la barra de Navegacion -->
     <!-- Inicio de contenido -->
     <div class="container">
-        <div class="reachUs">
-            <div class="contactUs">
-                <h2>Contacto</h2>
-                <form action="#">
-                    <label for="name">Nombre y Apellido</label>
-                    <input id="name" type="text"><br>
-                    <label for="email">Correo Electronico</label>
-                    <input id="email" type="email"><br>
-                    <label for="comment">Comentario</label>
-                    <textarea id="comment" name="" id="" cols="30" rows="5"></textarea><br>
-                    <button type="submit">Enviar</button>
-                </form>
-            </div>
+        <div class="contactUs">
+            <!-- Inicio Map -->
             <div class="map">
                 <h2>Ubicanos!</h2>
                 <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3329.089614420035!2d-73.12735002979107!3d7.12865032868947!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xa23e881849deb910!2sSillas%20Don%20Juan!5e0!3m2!1ses-419!2sco!4v1646956839543!5m2!1ses-419!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                <P><i class="fa-solid fa-location-dot"></i> DIRECCION: <span><a href="https://g.page/sillas-don-juan?share" target="_blank">Bulevar Santander #18-07, Bucaramanga - Santander</a></span></P>
+                <p><i class="fa-solid fa-envelope-open"></i> CORREO ELECTRONICO: <span><a href="mailto:metalyplastbussines@gmail.com">metalyplastbussines@gmail.com</a></span></p>
+                <P><i class="fa-solid fa-phone"></i> TELEFONO: <span><a href="tel:+3176845635">317 684 5635</a></span></P>
             </div>
+            <!-- Fin Map -->
+            <!-- Inicio Contact Form -->
+            <div class="contactForm">
+                <h2>Llena el formulario y deja que nuestro grupo de asesores te contacten!</h2>
+                <form action="#">
+                    <label for="">Nombre y Apellido</label>
+                    <input type="text" name="" id="">
+                    <label for="">Correo Electronico</label>
+                    <input type="email" name="" id="">
+                    <label for="">Numero de Telefono</label>
+                    <input type="number" name="" id="">
+                    <label for="">Commentario</label>
+                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+            <!-- Fin Contact Form -->
         </div>
     </div>
     <!-- Fin de contenido -->
     <!-- Inicio de Footer -->
-    <footer>
-        <div class="suscribe-form">
+    <footer class="footer">
+        <div class="subscribeForm">
             <form action="#">
-                <input type="email" id="suscribeForm" placeholder="Correo electronico">
-                <button class="btn btn-success" type="submit">Suscribirse</button>
+                <input type="text" name="subscribeForm" id="subscribeForm" placeholder="Subsribirse">
+                <button type="submit">Suscribirme</button>
             </form>
         </div>
         <div class="copyright">
-            <p>UNA MARCA DE<br>INVERSIONES DON JUAN BAUTISTA <br>2022 &copy; Todos los derechos reservados</p>
+            <p>Propiedad de INVERSIONES DON JUAN BAUTISTA, Todos los derechors reservados &copy; 2022 <br><span>Designed by Ruben Petit</span></p>
         </div>
         <div class="socials">
-            <a href="http://" target="_blank" rel="noopener noreferrer">
-                <i class="fa-brands fa-facebook-f"></i>
-            </a>
-            <a href="https://www.instagram.com/metalyplast/" target="_blank" rel="noopener noreferrer">
-                <i class="fa-brands fa-instagram"></i>
-            </a>
-            <a href="http://" target="_blank" rel="noopener noreferrer">
-                <i class="fa-brands fa-whatsapp "></i>
-            </a>
+            <ul>
+                <li><a href="https://www.facebook.com/metalyplast"><i class="fa-brands fa-facebook-f"></i></a></li>
+                <li><a href="https://www.instagram.com/metalyplast/"><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-whatsapp"></i></a></li>
+            </ul>
         </div>
     </footer>
     <!-- Fin de Footer -->

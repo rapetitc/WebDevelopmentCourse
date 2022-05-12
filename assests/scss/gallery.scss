@@ -1,0 +1,55 @@
+@mixin gallery {
+    display: block;/* block */
+    padding: 15px 0;
+    width: 100%;
+    h2{
+        text-align: center;
+        font-size: 2.5em;
+        margin: 20px;
+    }
+    .galleryItems{
+        width: 100%;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+
+        .galleryItem{
+            margin: 0.5% 0;
+            display: flex;
+            overflow: hidden;
+            width: 48%;
+            max-height: 350px;
+            img{
+                display: block;
+                margin: auto;
+                max-width: 100%;
+                max-height: 100%;
+            }
+        }
+    }
+    @media (min-width: 481px){
+        .galleryItems{
+            .galleryItem{
+                width: 32%;
+            }
+        }
+    }
+    @media (min-width: 1024px){
+        .galleryItems{
+            .galleryItem{
+                width: 24%;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+.gallery{
+    @include gallery;
+}

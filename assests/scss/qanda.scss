@@ -1,0 +1,68 @@
+@mixin qanda {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 3% 5%;
+
+    .questions{
+        width: 100%;
+        border-radius: 10px;
+        padding: 2%;
+        h2{
+            text-align: center;
+            font-size: 2em;
+            padding: 30px 0;
+        }
+        .question{
+            padding: 1% 2%;
+            background-color: rgb(233, 233, 233);
+            margin: 10px 0;
+
+            h3{
+                font-size: 1.5em;
+                padding: 10px;
+            }
+            p{
+                font-size: 1.2em;
+            }
+        }
+    }
+    .qandaExtra{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        div{
+            width: 80%;
+            display: flex;
+            flex-wrap: wrap;
+            align-content: space-around;
+            img{
+                max-width: 100%;
+                max-height: 100%;
+            }
+        }
+    }
+    @media (min-width: 481px){
+        flex-wrap: nowrap;
+        
+        .questions{
+            width: 50%;
+        }
+        .qandaExtra{
+            max-width: 50%;
+            display: flex;
+            div{
+                display: flex;
+                align-content: space-around;
+                img{
+                    max-width: 100%;
+                    max-height: 100%;
+                }
+            }
+        }
+    }
+    @media (min-width: 1024px){}
+}
+
+.qanda{
+    @include qanda;
+}

@@ -4,12 +4,76 @@ body{
     background-image: url(../media/background.jpg);
     background-repeat: no-repeat;
     background-repeat: round;
-    display: grid;
 }
 
 /******************************************************************
 Ajustes Generales
 ******************************************************************/
+/* Ajustes Generales */
+
+
+
+
+/* Colores */
+$blue:    #0d6efd !default;
+$indigo:  #6610f2 !default;
+$purple:  #6f42c1 !default;
+$pink:    #d63384 !default;
+$red:     #dc3545 !default;
+$orange:  #fd7e14 !default;
+$yellow:  #ffc107 !default;
+$green:   #198754 !default;
+$teal:    #20c997 !default;
+$cyan:    #0dcaf0 !default;
+
+$white:    #fff !default;
+$graylight:#dee2e6 !default;
+$gray:     #adb5bd !default;
+$graydark: #495057 !default;
+$black:    #000 !default;
+
+
+
+/* Theme adjust */
+$primary-bc: $blue;
+$secundary-bc: $orange;
+$primary-tc: $black;
+$secundary-tc: $graydark;
+
+
+
+.container{
+    width: 100%;
+    min-height: 100vh;
+    margin: 0 auto;
+    background-color: $white;
+}
+@media (min-width: 481px){}
+@media (min-width: 1024px){
+    .container{
+        width: 80%;
+    }
+}
+
+
+//IMPORTS
+/* General settings */
+@import '_reset';
+/* Templates */
+@import 'nav-bar';
+@import 'presentation';
+@import 'footer';
+@import 'slider';
+@import 'gallery';
+@import 'store';
+@import 'contactForm';
+@import 'articles';
+@import 'qanda';
+
+
+
+
+
 // Colores
 $bgcolor-1st: rgb(0, 98, 245);
 $bgcolor-2nd: rgb(233, 151, 0);
@@ -18,50 +82,49 @@ $light: rgb(255,255,255);
 
 
 
-/* AREAS */
-header{
-    grid-area: head;
-}
-.container{
-    grid-area: content;
-}
-footer{
-    grid-area: pie;
-}
-
-/* MAIN */
-.container{
-    background-color: $light;
-    min-height: 100vh;
-}
-
-/* Template para las grids de desktop*/
-/* body{
-    
-    grid-template-areas: 
-        "head head head"
-        ". content ."
-        "pie pie pie"
-    ;
-    grid-template-columns: 1fr  8fr 1fr;
-} */
 
 /******************************************************************
-RESPONSIVE DESING
+Ajustes De Paginas
 ******************************************************************/
-@import 'reset.scss';
-@import 'mobile.scss';
-@import 'tablet.scss';
-@import 'desktop.scss';
+.contactUs{
+    width: 90%;
+    padding: 5%;
+    display: flex;
+    justify-content: space-around;
+    flex-flow: row wrap;
+    .contactForm,.map{
+        margin: 10px 0;
+        width: 100%;
 
-/* General Desing*/
-/* .btn{
-    padding: 0 5px;
-    height: 32.5px;
-    background-color: orange;
-    border-radius: 5px;
-    border: none;
-    i{
-        padding: 100%;
+        h2{
+            text-align: center;
+            font-size: 2em;
+            margin: 20px 0;
+        }
+        iframe{
+            width: 100%;
+        }
+        p{
+            margin: 20px 0;
+            font-size: 1.3em;
+            i{
+                margin: 5px 15px 10px 0;
+            }
+            a{
+                color: inherit;
+                text-decoration: none;
+            }
+        }
     }
-} */
+    
+    @media (min-width: 481px){
+        .contactForm,.map{
+            width: 80%;
+        }
+    }
+    @media (min-width: 1024px){
+        .contactForm,.map{
+            width: 45%;
+        }
+    }
+}

@@ -1,0 +1,204 @@
+@mixin store {
+    /* display: none; */
+    padding: 15px 0;
+    /* background-color: red; */
+    .nav-search{
+        margin: 10px 0;
+        width: 100%;
+        form{
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            flex-wrap: nowrap;
+            width: 100%;
+            column-gap: 10px;
+            
+            input[type="search"]{
+                @include bt-form;
+                width: 50%;
+                background-color: rgba(0, 0, 0, 0);
+            }
+            button,
+            .controlFilter{
+                @include bt-form;
+            }
+            input#controlFilter{
+                display: none;
+            }
+            input#controlFilter:checked ~ .filters{
+                display: block;
+            }
+            .filters{
+                display: none;
+                flex-wrap: wrap;
+                justify-content: center;
+                position: fixed;
+                width: 100%;
+                height: 50vh;
+                z-index: 5;
+                left: 0;
+                bottom: 0;
+                background-color: rgb(255, 255, 255);
+
+                .controlFilter{
+                    display: block;
+                    position: absolute;
+                    right: 20px;
+                    top: 10px;
+                }
+                h3{
+                    text-align: center;
+                    font-size: 1.2em;
+                    width: 100%;
+                    margin: 10px 0;
+                    padding: 10px 0;
+                }
+                .filterSelection{
+                    padding: 5px 15px;
+                    .filter{
+                        margin: 20px auto;
+                        width: 90%;
+                        h4{
+                            padding: 10px 30px;
+                            font-size: 1.1em;
+                        }
+                        input[type="range"]{
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .articles{
+        width: 100%;
+        margin: 20px 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        row-gap: 50px;
+        .article{/* 
+            border: 1px solid lightgray; */
+                cursor: pointer;
+            border-radius: 5px;
+            min-width: 200px;
+            width: 48%;
+            max-width: 250px;
+            min-height: 300px;
+            &:hover .articleDescription{
+                border: 1px solid lightgray;
+                /* background-color: aquamarine; */
+                /* height: 30%; */
+                h3{
+                }
+                p{
+                }
+            }
+
+            .articleImg{
+                border-radius: 5px 5px 0 0 ;
+                background-color: rgb(235, 235, 235);
+                display: flex;
+                overflow: hidden;
+                width: 100%;
+                height: 250px;
+                img{
+                    display: block;
+                    margin: auto;
+                    max-width: 100%;
+                    max-height: 100%;
+                }
+            }
+            .articleDescription{
+                border: 1px solid lightgray;
+                padding: 3% 3%;
+                position: relative;
+                overflow: hidden;
+                border-radius: 0 0 5px 5px;
+                /* background-color: wheat; */
+                height: 20%;
+                h3{
+                    width: 100%;
+                    /* background-color: red; */
+                    display: inline;
+                    margin: 5% 0;
+                    font-size: 1.4em;
+                    height: 20%;
+                    white-space: nowrap;
+                    text-overflow: clip;
+                }
+                p{
+                    /* background-color: aqua; */
+                    color: black;
+                    font-size: 1.4em;
+                    margin: 5% 0;
+                    height: 45%;
+                    white-space: nowrap;
+                    text-overflow: clip;
+                    span{
+                        font-size: 0.7em;
+                        color: green;
+                        text-decoration: line-through;
+                    }
+                }
+            }
+        }
+    }
+    @media (min-width: 481px){
+        .nav-search{
+            form{
+                display: flex;
+                flex-wrap: wrap;
+                .filters{
+                    background-color: lightgray;
+                    display: none;
+                    position: static;
+                    width: 100%;
+                    height: auto;
+                    margin: 10px 0;
+                    padding: 0;
+                    h3{
+                        display: none;
+                    }
+                    .filterSelection{
+                        display: flex;
+                        .filter{
+                            margin: 0 10px;
+                        }
+                    }
+                }
+            }
+        }
+        /* .articles{
+            .article{
+                width: 31%;
+            }
+        } */
+    }
+    @media (min-width: 1024px){
+        /* .articles{
+            .article{
+                width: 23.2%;
+            }
+        } */
+    }
+}
+
+
+
+
+
+
+
+@mixin bt-form {
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    padding: 5px 7px;
+    background-color: orange;
+    
+}
+
+
+.store{
+    @include store;
+}

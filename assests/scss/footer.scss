@@ -1,0 +1,89 @@
+@mixin footer ($bc:$primary-bc,$bc2:$secundary-bc,$tc:$primary-tc) {
+    padding: 10px 0;
+    width: 100%;
+    min-height: 75px;
+    background-color: $bc;
+    display: flex;/* flex */
+    flex-wrap: wrap;
+    align-items: center;
+    .subscribeForm{
+        width: 100%;
+        form{
+            padding: 10px 0;
+            display: flex;
+            justify-content: center;
+            input{
+                width: 50%;
+                height: 20px;
+                margin-right: 1%;
+                border-radius: 5px;
+            }
+            button{
+                background-color: orange;
+                width: 30%;
+                border-radius: 5px;
+
+            }
+        }
+    }
+    .copyright{
+        width: 200%;
+        font-size: 1.1em;
+        text-align: center;
+        span{
+            font-size: .9em;
+            color: rebeccapurple;
+        }
+    }
+    .socials{
+        width: 100%;
+        ul{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            li{
+                margin: 3%;
+                font-size: 2em;
+                a{
+                    color: $tc;
+                    text-decoration: none;
+                    &:hover{
+                        color: lightgray;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (min-width: 481px){
+        .subscribeForm{
+            form{
+                input{
+                    width: 45%;
+                }
+                button{
+                    width: 20%;
+                }
+            }
+        }
+    }
+
+    @media (min-width: 1024px){
+        flex-wrap: nowrap;
+        
+        .subscribeForm{
+            form{
+                input{
+                    width: 55%;
+                }
+                button{
+                    width: 35%;
+                }
+            }
+        }
+    }
+}
+
+.footer{
+    @include footer;
+}

@@ -7,6 +7,11 @@
     <link rel="icon" href="assests/media/logo.png">
     <title>METALYPLAST</title>
 
+    <!-- SEO -->
+    <meta name="description" content="La mejores silas y mesas Tradicionales, Totalmente artesanales, hechas a mano que puedas encontrar en Bucaramanga y Colombia"/>
+    <meta name="keyboard" content="Sillas, Mesas, Artesanales, Hogar, Muebles, Mimbre, Bucaramanga">
+    <!-- SEO -->
+
     <!-- Andika Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,74 +28,94 @@
 </head>
 <body>
     <!-- Inicio de la barra de Navegacion -->
-    <header>
-        <a href="index.html">
-            <img src="assests/media/logo.png" class="logo">
-        </a>
-        <h1><a href="index.html">METAL&PLAST</a></h1>
-        <nav>
-            <input type="checkbox" id="menuBtn">
-            <label for="menuBtn"><i class="fa-solid fa-bars"></i></label>
-            <ul id="menu">
-                <li><a href="index.html"><p>Inicio</p></a></li>
-                <li><a href="pages/store.html"><p>Tienda</p></a></li>
-                <li><a href="pages/us.html"><p>Nosotros</p></a></li>
-                <li><a href="pages/contact.html"><p>Contacto</p></a></li>
-                <li><a href="pages/qanda.html"><p>Preguntas Frecuentes</p></a></li>
+    <div class="nav-bar">
+        <div class="nav-logo">
+            <a href="index.html">
+                <img src="assests/media/logo.png" class="METAL&PLAST">
+            </a>
+        </div>
+        <div class="nav-title">
+            <h1><a href="index.html">METAL&PLAST</a></h1>
+        </div>
+        <nav class="nav-menu">
+            <label for="menu-control" class="menu-control"><i class="fa-solid fa-bars"></i></label>
+            <input type="checkbox" name="menu-control" id="menu-control">
+            <ul class="menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="pages/store.html">Tienda</a></li>
+                <li><a href="pages/us.html">Nosotros</a></li>
+                <li><a href="pages/contact.html">Contacto</a></li>
+                <li><a href="pages/qanda.html">Preguntas Frecuentes</a></li>
             </ul>
         </nav>
-    </header>
+    </div>
     <!-- Fin de la barra de Navegacion -->
-    <!-- Inicio de la barra de Navegacion -->
+    <!-- Inicio de contenido -->
     <div class="container">
-        <div class="mainad">
-            <h2>Las mejores Sillas Tradicionales a encontrar en Bucaramanga!</h2>
-            <p>Mas de 15 Modelos de sillas + Distintos modelos de mesas + Si ves algun modelo distinto fuera de nuestro catalogo tambien te lo diseñamos!</p>
+        <!-- Inicio Presentation -->
+        <div class="presentation">
+            <div class="preImg">
+                <img src="assests/media/mainad.gif" alt="Description item 1">
+            </div>
+            <div class="preDesc">
+                <h2>Las mejores Sillas Tradicionales a encontrar en Bucaramanga!</h2>
+                <p>Mas de 15 Modelos de sillas + Distintos modelos de mesas + Si ves algun modelo distinto fuera de nuestro catalogo tambien te lo diseñamos!</p>
+            </div>
         </div>
+        <!-- Fin Presentation -->
+        <!-- Inicio Gallery -->
         <div class="gallery">
-            <h2>Galeria de Fotos</h2>
-            <article>
-                <img src="assests/media/item1.jpg" alt="item1">
-            </article>
-            <article>
-                <img src="assests/media/item2.jpg" alt="item2">
-            </article>
-            <article>
-                <img src="assests/media/item3.jpg" alt="item3">
-            </article>
-            <article>
-                <img src="assests/media/item4.jpg" alt="item4">
-            </article>
-            <article>
-                <img src="assests/media/item5.jpg" alt="item5">
-            </article>
-            <article>
-                <img src="assests/media/item6.jpg" alt="item6">
-            </article>
+            <h2>Galeria</h2>
+            <div class="galleryItems">
+                <div class="galleryItem">
+                    <img src="assests/media/item1.jpg" alt="Description item 3">
+                </div>
+                <div class="galleryItem">
+                    <img src="assests/media/item2.jpg" alt="Description item 3">
+                </div>
+                <div class="galleryItem">
+                    <img src="assests/media/item3.jpg" alt="Description item 3">
+                </div>
+                <div class="galleryItem">
+                    <img src="assests/media/item4.jpg" alt="Description item 3">
+                </div>
+                <div class="galleryItem">
+                    <img src="assests/media/item5.jpg" alt="Description item 3">
+                </div>
+                <div class="galleryItem">
+                    <img src="assests/media/item6.jpg" alt="Description item 3">
+                </div>
+                <div class="galleryItem">
+                    <img src="assests/media/item1.jpg" alt="Description item 3">
+                </div>
+                <div class="galleryItem">
+                    <img src="assests/media/item2.jpg" alt="Description item 3">
+                </div>
+                <div class="galleryItem">
+                    <img src="assests/media/item3.jpg" alt="Description item 3">
+                </div>
+            </div>
         </div>
+        <!-- Fin Gallery -->
     </div>
     <!-- Fin de contenido -->
     <!-- Inicio de Footer -->
-    <footer>
-        <div class="suscribe-form">
+    <footer class="footer">
+        <div class="subscribeForm">
             <form action="#">
-                <input type="email" id="suscribeForm" placeholder="Correo electronico">
-                <button class="btn btn-success" type="submit">Suscribirse</button>
+                <input type="text" name="subscribeForm" id="subscribeForm" placeholder="Subsribirse">
+                <button type="submit">Suscribirme</button>
             </form>
         </div>
         <div class="copyright">
-            <p>UNA MARCA DE<br>INVERSIONES DON JUAN BAUTISTA <br>2022 &copy; Todos los derechos reservados</p>
+            <p>Propiedad de INVERSIONES DON JUAN BAUTISTA, Todos los derechors reservados &copy; 2022 <br><span>Designed by Ruben Petit</span></p>
         </div>
         <div class="socials">
-            <a href="http://" target="_blank" rel="noopener noreferrer">
-                <i class="fa-brands fa-facebook-f"></i>
-            </a>
-            <a href="https://www.instagram.com/metalyplast/" target="_blank" rel="noopener noreferrer">
-                <i class="fa-brands fa-instagram"></i>
-            </a>
-            <a href="http://" target="_blank" rel="noopener noreferrer">
-                <i class="fa-brands fa-whatsapp "></i>
-            </a>
+            <ul>
+                <li><a href="https://www.facebook.com/metalyplast"><i class="fa-brands fa-facebook-f"></i></a></li>
+                <li><a href="https://www.instagram.com/metalyplast/"><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-whatsapp"></i></a></li>
+            </ul>
         </div>
     </footer>
     <!-- Fin de Footer -->

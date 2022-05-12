@@ -4,8 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="assests/media/logo.png">
+    <link rel="icon" href="../assests/media/logo.png">
     <title>METALYPLAST</title>
+
+    <!-- SEO -->
+    <meta name="description" content="La mejores silas y mesas Tradicionales, Totalmente artesanales, hechas a mano que puedas encontrar en Bucaramanga y Colombia"/>
+    <meta name="keyboard" content="Sillas, Mesas, Artesanales, Hogar, Muebles, Mimbre, Bucaramanga">
+    <!-- SEO -->
 
     <!-- Andika Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,30 +28,33 @@
 </head>
 <body>
     <!-- Inicio de la barra de Navegacion -->
-    <header>
-        <a href="index.html">
-            <img src="../assests/media/logo.png" class="logo">
-        </a>
-        <h1><a href="index.html">METAL&PLAST</a></h1>
-        <nav>
-            <input type="checkbox" id="menuBtn">
-            <label for="menuBtn"><i class="fa-solid fa-bars"></i></label>
-            <ul id="menu">
-                <li><a href="../index.html"><p>Inicio</p></a></li>
-                <li><a href="store.html"><p>Tienda</p></a></li>
-                <li><a href="us.html"><p>Nosotros</p></a></li>
-                <li><a href="contact.html"><p>Contacto</p></a></li>
-                <li><a href="qanda.html"><p>Preguntas Frecuentes</p></a></li>
+    <div class="nav-bar">
+        <div class="nav-logo">
+            <a href="../index.html">
+                <img src="../assests/media/logo.png" class="METAL&PLAST">
+            </a>
+        </div>
+        <div class="nav-title">
+            <h1><a href="../index.html">METAL&PLAST</a></h1>
+        </div>
+        <nav class="nav-menu">
+            <label for="menu-control" class="menu-control"><i class="fa-solid fa-bars"></i></label>
+            <input type="checkbox" name="menu-control" id="menu-control">
+            <ul class="menu">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="store.html">Tienda</a></li>
+                <li><a href="us.html">Nosotros</a></li>
+                <li><a href="contact.html">Contacto</a></li>
+                <li><a href="qanda.html">Preguntas Frecuentes</a></li>
             </ul>
         </nav>
-    </header>
+    </div>
     <!-- Fin de la barra de Navegacion -->
     <!-- Inicio de contenido -->
     <div class="container">
         <div class="qanda">
-            <h2>Preguntas Frecuentes</h2>
-            <hr>
             <div class="questions">
+                <h2>Tus Preguntas Mas Frecuentes</h2>
                 <div class="question">
                     <h3>Como podemos comprar?</h3>
                     <p>Para ti tenemos una tienda online totalmente funcional para llevar a cabo tus pedidos, puedes visitar <a href="store.html">Nuestra Tienda Online</a> o contactandonos directamente, visita nuestra pagina de <a href="contact.html">Contacto</a> para llevar a cabo tu compra!</p>
@@ -68,30 +76,31 @@
                     <p>Hasta el momento no tenemos disponible esta opcion de pago, sin embargo estamos trabajando para ofrecerte la mejor manera de llevar a cabo cualquier transaccion con nuestros productos</p>
                 </div>
             </div>
+            <div class="qandaExtra">
+                <div>
+                    <img src="../assests/media/itemUs2.jpg" alt="Extra Content">
+                </div>
+            </div>
         </div>
     </div>
     <!-- Fin de contenido -->
     <!-- Inicio de Footer -->
-    <footer>
-        <div class="suscribe-form">
+    <footer class="footer">
+        <div class="subscribeForm">
             <form action="#">
-                <input type="email" id="suscribeForm" placeholder="Correo electronico">
-                <button class="btn btn-success" type="submit">Suscribirse</button>
+                <input type="text" name="subscribeForm" id="subscribeForm" placeholder="Subsribirse">
+                <button type="submit">Suscribirme</button>
             </form>
         </div>
         <div class="copyright">
-            <p>UNA MARCA DE<br>INVERSIONES DON JUAN BAUTISTA <br>2022 &copy; Todos los derechos reservados</p>
+            <p>Propiedad de INVERSIONES DON JUAN BAUTISTA, Todos los derechors reservados &copy; 2022 <br><span>Designed by Ruben Petit</span></p>
         </div>
         <div class="socials">
-            <a href="http://" target="_blank" rel="noopener noreferrer">
-                <i class="fa-brands fa-facebook-f"></i>
-            </a>
-            <a href="https://www.instagram.com/metalyplast/" target="_blank" rel="noopener noreferrer">
-                <i class="fa-brands fa-instagram"></i>
-            </a>
-            <a href="http://" target="_blank" rel="noopener noreferrer">
-                <i class="fa-brands fa-whatsapp "></i>
-            </a>
+            <ul>
+                <li><a href="https://www.facebook.com/metalyplast"><i class="fa-brands fa-facebook-f"></i></a></li>
+                <li><a href="https://www.instagram.com/metalyplast/"><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-whatsapp"></i></a></li>
+            </ul>
         </div>
     </footer>
     <!-- Fin de Footer -->
