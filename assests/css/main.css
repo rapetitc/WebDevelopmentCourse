@@ -662,7 +662,9 @@ table {
     width: 94%;
   }
   .information .article:last-child img {
+    float: left;
     width: 80%;
+    margin: 5px 10px;
     max-width: 500px;
     max-height: 400px;
   }
@@ -672,7 +674,6 @@ table {
     width: 46%;
   }
   .information .article:last-child img {
-    float: left;
     width: 50%;
     margin: 1%;
   }

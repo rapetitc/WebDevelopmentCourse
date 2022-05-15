@@ -30,7 +30,9 @@
             &:last-child{
                 width: 94%;
                 img{
+                    float: left;
                     width: 80%;
+                    margin: 5px 10px;
                     max-width: 500px;
                     max-height: 400px;
                 }
@@ -42,7 +44,6 @@
             width: 46%;
             &:last-child{
                 img{
-                    float: left;
                     width: 50%;
                     margin: 1%
                 }
