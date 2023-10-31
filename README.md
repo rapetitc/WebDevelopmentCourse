@@ -1,4 +1,4 @@
-# MetalyplastV1
+# WebDevelopmentCourse
 
 Mi primer proyecto creado para la cursada de **Desarrollo Web** de **[CODERHOUSE](https://www.coderhouse.com/)**
 
