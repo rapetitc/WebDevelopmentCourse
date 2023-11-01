@@ -1,89 +1,122 @@
-@mixin footer ($bc:$primary-bc,$bc2:$secundary-bc,$tc:$primary-tc) {
-    padding: 10px 0;
+footer.footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 10px 0;
+  background-color: rgb(26, 98, 165);
+
+  div.socials {
     width: 100%;
-    min-height: 75px;
-    background-color: $bc;
-    display: flex;/* flex */
-    flex-wrap: wrap;
-    align-items: center;
-    .subscribeForm{
-        width: 100%;
-        form{
-            padding: 10px 0;
-            display: flex;
-            justify-content: center;
-            input{
-                width: 50%;
-                height: 20px;
-                margin-right: 1%;
-                border-radius: 5px;
-            }
-            button{
-                background-color: orange;
-                width: 30%;
-                border-radius: 5px;
+    margin: 5px 0;
+    padding: 5px 0;
 
-            }
-        }
+    p {
+      margin-left: 10%;
+      padding: 5px 0 15px 0;
+      font-size: 26px;
     }
-    .copyright{
-        width: 200%;
-        font-size: 1.1em;
-        text-align: center;
-        span{
-            font-size: .9em;
-            color: rebeccapurple;
-        }
-    }
-    .socials{
-        width: 100%;
-        ul{
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            li{
-                margin: 3%;
-                font-size: 2em;
-                a{
-                    color: $tc;
-                    text-decoration: none;
-                    &:hover{
-                        color: lightgray;
-                    }
-                }
-            }
-        }
-    }
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      list-style: none;
 
-    @media (min-width: 481px){
-        .subscribeForm{
-            form{
-                input{
-                    width: 45%;
-                }
-                button{
-                    width: 20%;
-                }
-            }
-        }
-    }
+      li {
+        a {
+          color: white;
 
-    @media (min-width: 1024px){
-        flex-wrap: nowrap;
-        
-        .subscribeForm{
-            form{
-                input{
-                    width: 55%;
-                }
-                button{
-                    width: 35%;
-                }
-            }
+          &:hover {
+            color: rgb(174, 174, 174);
+          }
+          svg {
+            width: 30px;
+            height: 30px;
+          }
         }
+      }
     }
+  }
+  div.subscribe {
+    width: 100%;
+    margin: 10px 0;
+
+    p {
+      margin: 5px 0;
+      text-align: center;
+      font-size: 18px;
+      font-weight: 600;
+      color: orange;
+    }
+    form {
+      height: max-content;
+      padding: 10px 0;
+      display: flex;
+      justify-content: center;
+
+      input {
+        width: 60%;
+        padding: 7px 15px;
+        margin: 0 5px;
+        border: 1px solid gray;
+        border-radius: 5px;
+        outline: none;
+        font-size: 13px;
+        font-weight: 500;
+      }
+      button {
+        display: flex;
+        align-items: center;
+        padding: 7px 15px;
+        margin: 0 5px;
+        color: rgb(52, 52, 52);
+        background-color: orange;
+        border: 1px solid gray;
+        border-radius: 5px;
+        font-size: 13px;
+        font-weight: 600;
+
+        svg {
+          width: 18px;
+          height: 18px;
+          margin-left: 7px;
+        }
+      }
+    }
+  }
+  div.copyright {
+    width: 100%;
+    padding: 5px;
+    margin: 5px 0;
+
+    p {
+      padding: 5px;
+      color: white;
+      text-align: center;
+
+      span {
+        font-style: italic;
+      }
+    }
+  }
 }
 
-.footer{
-    @include footer;
+@media (min-width: 481px) {
+  footer.footer {
+    div.socials {
+      width: 40%;
+    }
+    div.subscribe {
+      width: 60%;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  footer.footer {
+    > * {
+      width: 33% !important;
+    }
+  }
 }

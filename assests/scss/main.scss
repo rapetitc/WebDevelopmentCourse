@@ -1,130 +1,26 @@
-/* Ajustes por defectos */
-body{
-    background-color: rgb(239, 250, 255);
-    background-image: url(../media/background.jpg);
-    background-repeat: no-repeat;
-    background-repeat: round;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/******************************************************************
-Ajustes Generales
-******************************************************************/
-/* Ajustes Generales */
-
-
-
-
-/* Colores */
-$blue:    #0d6efd !default;
-$indigo:  #6610f2 !default;
-$purple:  #6f42c1 !default;
-$pink:    #d63384 !default;
-$red:     #dc3545 !default;
-$orange:  #fd7e14 !default;
-$yellow:  #ffc107 !default;
-$green:   #198754 !default;
-$teal:    #20c997 !default;
-$cyan:    #0dcaf0 !default;
-
-$white:    #fff !default;
-$graylight:#dee2e6 !default;
-$gray:     #adb5bd !default;
-$graydark: #495057 !default;
-$black:    #000 !default;
-
-
-
-/* Theme adjust */
-$primary-bc: $blue;
-$secundary-bc: $orange;
-$primary-tc: $black;
-$secundary-tc: $graydark;
-
-
-
-.container{
-    width: 100%;
-    min-height: 100vh;
-    margin: 0 auto;
-    background-color: $white;
+.container {
+  width: 100%;
+  min-height: calc(100vh);
+  margin: 0 auto;
 }
-@media (min-width: 481px){}
-@media (min-width: 1024px){
-    .container{
-        width: 80%;
-    }
+@media (min-width: 1024px) {
+  .container {
+    width: 80%;
+  }
 }
 
-
-//IMPORTS
-/* General settings */
-@import '_reset';
-/* Templates */
-@import 'nav-bar';
-@import 'presentation';
-@import 'footer';
-@import 'slider';
-@import 'gallery';
-@import 'store';
-@import 'contactForm';
-@import 'articles';
-@import 'qanda';
-
-
-
-
-
-// Colores
-$bgcolor-1st: rgb(0, 98, 245);
-$bgcolor-2nd: rgb(233, 151, 0);
-$bgcolor-2nd-active: rgb(182, 118, 1);
-$light: rgb(255,255,255);
-
-
-
-
-/******************************************************************
-Ajustes De Paginas
-******************************************************************/
-.contactUs{
-    width: 90%;
-    padding: 5%;
-    display: flex;
-    justify-content: space-around;
-    flex-flow: row wrap;
-    .contactForm,.map{
-        margin: 10px 0;
-        width: 100%;
-
-        h2{
-            text-align: center;
-            font-size: 2em;
-            margin: 20px 0;
-        }
-        iframe{
-            width: 100%;
-        }
-        p{
-            margin: 20px 0;
-            font-size: 1.3em;
-            i{
-                margin: 5px 15px 10px 0;
-            }
-            a{
-                color: inherit;
-                text-decoration: none;
-            }
-        }
-    }
-    
-    @media (min-width: 481px){
-        .contactForm,.map{
-            width: 80%;
-        }
-    }
-    @media (min-width: 1024px){
-        .contactForm,.map{
-            width: 45%;
-        }
-    }
-}
+@import "navbar";
+@import "presentation";
+@import "gallery";
+@import "footer";
+@import "slider";
+@import "store";
+@import "articles";
+@import "contactus";
+@import "qanda";

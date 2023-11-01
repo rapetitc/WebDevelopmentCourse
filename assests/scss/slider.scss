@@ -1,88 +1,68 @@
-$slidersN: '2'; /* Cuantos Sliders Tiene Tu Web?*/
-
 @keyframes slideAnimation {
-    @if $slidersN == '2'{
-        0%{margin-left: 0;}
-        10%{margin-left: 0;}
-        95%{margin-left: -100%;}
-        100%{margin-left: -100%;}
-    } @else if $slidersN == '3' {
-        0%{margin-left: 0;}
-        10%{margin-left: 0;}
-        45%{margin-left: -100%;}
-        55%{margin-left: -100%;}
-        90%{margin-left: -200%;}
-        100%{margin-left: -200%;}
-    } @else if $slidersN == '4' {
-        0%{margin-left: 0;}
-        12.5%{margin-left: 0;}
-        25%{margin-left: -100%;}
-        37.5%{margin-left: -100%;}
-        50%{margin-left: -200%;}
-        62.5%{margin-left: -200%;}
-        75%{margin-left: -300%;}
-        87.5%{margin-left: -300%;}
-    } @else {
-        0%{margin-left: 0;}
-    }
+  0% {
+    margin-left: 0;
+  }
+  10% {
+    margin-left: -100%;
+  }
+  40% {
+    margin-left: -100%;
+  }
+  50% {
+    margin-left: -200%;
+  }
+  70% {
+    margin-left: -200%;
+  }
+  80% {
+    margin-left: 0;
+  }
 }
 
-@if $slidersN == '2'{
-    $slidersN: 5s;
-}
-@else if $slidersN == '3'{
-    $slidersN: 10s;
-}
-@else if $slidersN == '4'{
-    $slidersN: 15s;
-} @else {
-    $slidersN: 0s;
-}
+.sliders {
+  width: 100%;
+  max-width: 1024px;
+  height: 350px;
+  margin: 0 auto;
+  overflow: hidden;
 
-@mixin sliders ($sd){
-    /* display: none; */
-    margin: 0 auto;
-    overflow: hidden;
-    width: 100%;
-    max-width: 1280px;
-    height: 35vw;
-    min-height: 300px;
-    max-height: 500px;
-    background-color: white;
+  ul {
+    display: flex;
+    animation: slideAnimation 15s infinite ease-out;
+    width: 300%;
+    height: 100%;
+    list-style: none;
 
-    ul{
+    li {
+      display: flex;
+      position: relative;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+
+      img {
+        min-width: 100%;
+        min-height: 100%;
+      }
+      div {
         display: flex;
-        animation: slideAnimation $sd infinite ease-out;
-        width: 300%;
-        height: 100%;
-        /* background-color: aqua; */
-        li{
-            display: block;
-            width: 100%;
-            height: 100%;
-            img{
-                display: block;
-                width: 100%;
-                height: 100%;
-            }
-            p{
-                display: block;
-                position: relative;
-                bottom: 50px;
-                font-size: 2em;
-                text-align: center;text-shadow: 0 0 10px black;
-                color: white;
-            }
+        justify-content: center;
+        position: absolute;
+        bottom: 0px;
+        left: 0;
+        width: 100%;
+
+        p {
+          width: max-content;
+          margin: 5px 0;
+          padding: 5px 25px;
+          font-size: 1.5em;
+          text-align: center;
+          text-shadow: 0 0 10px black;
+          color: white;
+          background-color: rgba(47, 47, 47, 0.1);
         }
+      }
     }
-
-    @media (min-width: 481px){}
-    @media (min-width: 1024px){}
-}
-
-
-
-
-.sliders{
-    @include sliders($slidersN);
+  }
 }

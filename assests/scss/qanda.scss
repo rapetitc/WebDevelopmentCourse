@@ -1,68 +1,74 @@
-@mixin qanda {
+div.qanda {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 3% 5%;
+
+  div.questions {
+    width: 100%;
+    border-radius: 10px;
+    padding: 2%;
+
+    h2 {
+      width: 100%;
+      padding: 20px 0 30px 0;
+      text-align: center;
+      font-size: 2em;
+    }
+
+    div.question {
+      width: 100%;
+      margin: 10px 0;
+      padding: 13px;
+      border-radius: 5px;
+      background-color: rgb(233, 233, 233);
+
+      h3 {
+        font-size: 1.5em;
+        padding: 0 0 7px 5px;
+      }
+      p {
+        font-size: 1.2em;
+      }
+    }
+  }
+  div.qanda-extra {
     display: flex;
-    flex-wrap: wrap;
-    padding: 3% 5%;
+    justify-content: center;
+    float: right;
+    width: 100%;
+    height: max-content;
 
-    .questions{
-        width: 100%;
-        border-radius: 10px;
-        padding: 2%;
-        h2{
-            text-align: center;
-            font-size: 2em;
-            padding: 30px 0;
-        }
-        .question{
-            padding: 1% 2%;
-            background-color: rgb(233, 233, 233);
-            margin: 10px 0;
+    div {
+      width: 80%;
+      display: flex;
+      flex-wrap: wrap;
+      align-content: space-around;
 
-            h3{
-                font-size: 1.5em;
-                padding: 10px;
-            }
-            p{
-                font-size: 1.2em;
-            }
-        }
+      img {
+        max-width: 100%;
+        max-height: 100%;
+      }
     }
-    .qandaExtra{
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        div{
-            width: 80%;
-            display: flex;
-            flex-wrap: wrap;
-            align-content: space-around;
-            img{
-                max-width: 100%;
-                max-height: 100%;
-            }
-        }
-    }
-    @media (min-width: 481px){
-        flex-wrap: nowrap;
-        
-        .questions{
-            width: 50%;
-        }
-        .qandaExtra{
-            max-width: 50%;
-            display: flex;
-            div{
-                display: flex;
-                align-content: space-around;
-                img{
-                    max-width: 100%;
-                    max-height: 100%;
-                }
-            }
-        }
-    }
-    @media (min-width: 1024px){}
+  }
 }
-
-.qanda{
-    @include qanda;
+@media (min-width: 768px) {
+  div.qanda {
+    div.questions {
+      width: 50%;
+    }
+    div.qanda-extra {
+      width: 50%;
+      padding-top: 100px;
+    }
+  }
+}
+@media (min-width: 1024px) {
+  div.qanda {
+    div.questions {
+      width: 65%;
+    }
+    div.qanda-extra {
+      width: 35%;
+    }
+  }
 }

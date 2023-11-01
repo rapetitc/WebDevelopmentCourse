@@ -1,22 +1,13 @@
-/* Ajustes por defectos */
-body {
-  background-color: rgb(239, 250, 255);
-  background-image: url(../media/background.jpg);
-  background-repeat: no-repeat;
-  background-repeat: round;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/******************************************************************
-Ajustes Generales
-******************************************************************/
-/* Ajustes Generales */
-/* Colores */
-/* Theme adjust */
 .container {
   width: 100%;
   min-height: 100vh;
   margin: 0 auto;
-  background-color: #fff;
 }
 
 @media (min-width: 1024px) {
@@ -24,767 +15,775 @@ Ajustes Generales
     width: 80%;
   }
 }
-/* General settings */
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-}
-
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-  display: block;
-}
-
-body {
-  line-height: 1;
-}
-
-ol, ul {
-  list-style: none;
-}
-
-blockquote, q {
-  quotes: none;
-}
-
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: "";
-  content: none;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-/* Templates */
-.nav-bar {
-  margin: 0;
-  width: 100%;
-  height: 75px;
-  background-color: #0d6efd;
+header.nav-bar {
   display: flex;
-  /* flex */
-  flex-wrap: nowrap;
   justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 20px 5px;
+  background-color: rgb(26, 98, 165);
 }
-.nav-bar .nav-logo {
-  height: 60%;
-  width: 20%;
-  display: flex;
-  align-self: center;
-  justify-content: start;
-}
-.nav-bar .nav-logo img {
-  height: 100%;
-}
-.nav-bar .nav-title {
-  width: 80%;
-  height: 100%;
-  font-size: 2em;
+header.nav-bar a.nav-logo {
   display: flex;
   align-items: center;
-  justify-content: center;
-}
-.nav-bar .nav-title a {
-  color: #000;
+  width: max-content;
+  height: max-content;
+  margin: 0 5px;
+  padding: 5px;
   text-decoration: none;
+  text-shadow: 1px 1px 10px black;
 }
-.nav-bar .nav-menu {
-  width: 20%;
+header.nav-bar a.nav-logo img {
+  display: none;
+  width: auto;
+  height: 30px;
+  margin: 0 5px;
+}
+header.nav-bar a.nav-logo h1 {
+  margin: 0 5px;
+  color: orange;
+  font-weight: bold;
+  font-size: xx-large;
+}
+header.nav-bar .nav-menu {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  position: relative;
 }
-.nav-bar .nav-menu .menu-control {
-  font-size: 2em;
-  border: 1px solid lightgray;
-  padding: 3px 8px;
-  border-radius: 5px;
-  background-color: #fd7e14;
+header.nav-bar .nav-menu label {
+  height: min-content;
+  padding: 2px 2px 0 2px;
+  margin: 0 10px;
+  cursor: pointer;
 }
-.nav-bar .nav-menu #menu-control {
+header.nav-bar .nav-menu label svg {
+  width: 30px;
+  height: 30px;
+}
+header.nav-bar .nav-menu input {
   display: none;
 }
-.nav-bar .nav-menu .menu {
-  display: none;
-  flex-wrap: wrap;
-  align-items: center;
+header.nav-bar .nav-menu div {
+  display: flex;
   justify-content: center;
   position: absolute;
-  top: 75px;
-  left: 0;
+  top: 85.5px;
+  right: 100%;
+  height: 0%;
+  margin-top: -25px;
+  margin-right: -59px;
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 100vw;
+  overflow: hidden;
+  transition: height 0.3s ease-in-out;
   z-index: 10;
-  width: 100%;
-  background-color: #fd7e14;
 }
-.nav-bar .nav-menu .menu li {
-  width: 100%;
+header.nav-bar .nav-menu div ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  width: min-content;
+  padding: 15px 0;
+  list-style: none;
 }
-.nav-bar .nav-menu .menu li a {
-  margin: 20px;
-  display: block;
+header.nav-bar .nav-menu div ul li {
+  width: 100%;
+  min-width: max-content;
+  height: min-content;
+  margin: 0 5px;
+  padding: 3px 6px;
   text-align: center;
-  font-size: 2em;
-  color: #000;
+}
+header.nav-bar .nav-menu div ul li a {
+  font-size: larger;
+  font-weight: bolder;
+  color: orange;
   text-decoration: none;
 }
-.nav-bar .nav-menu .menu li a:hover {
-  color: #495057;
+header.nav-bar .nav-menu div ul li a:hover {
+  color: lightgoldenrodyellow;
+  text-decoration: underline;
 }
-.nav-bar input#menu-control:checked ~ .menu {
-  display: flex;
+header.nav-bar .nav-menu input#menu-control:checked ~ div {
+  height: 170px;
 }
+
 @media (min-width: 481px) {
-  .nav-bar .nav-logo {
-    height: 70%;
-    justify-content: center;
+  header.nav-bar a.nav-logo img {
+    display: block;
   }
-  .nav-bar .nav-title {
-    font-size: 3em;
+}
+@media (min-width: 768px) {
+  header.nav-bar nav.nav-menu label {
+    display: none;
   }
-  .nav-bar .nav-menu .menu li a {
-    margin: 15px;
+  header.nav-bar nav.nav-menu div {
+    position: static;
+    width: max-content;
+    margin: 0 10px;
+    background-color: transparent;
+  }
+  header.nav-bar nav.nav-menu div ul {
+    flex-wrap: nowrap;
+  }
+  header.nav-bar nav.nav-menu div ul li {
+    padding: 0;
+  }
+  header.nav-bar nav.nav-menu div ul li a {
+    font-size: medium;
+  }
+  header.nav-bar input#menu-control:checked ~ div {
+    height: max-content !important;
   }
 }
 @media (min-width: 1024px) {
-  .nav-bar .nav-title {
-    width: 20%;
-    justify-content: start;
-  }
-  .nav-bar .nav-menu {
-    width: 180%;
-  }
-  .nav-bar .nav-menu .menu-control {
-    display: none;
-  }
-  .nav-bar .nav-menu .menu {
-    justify-content: end;
-    background-color: rgba(255, 0, 0, 0);
-    display: flex;
-    flex-wrap: wrap;
-    position: relative;
-    top: auto;
-    left: auto;
-  }
-  .nav-bar .nav-menu .menu li {
-    border-radius: 5px;
-    background-color: #fd7e14;
-    margin: 0 1%;
-    width: auto;
-  }
-  .nav-bar .nav-menu .menu li:last-child {
-    margin-right: 3%;
-  }
-  .nav-bar .nav-menu .menu li a {
-    font-size: 1em;
+  header.nav-bar nav.nav-menu div ul li a {
+    font-size: large;
   }
 }
-
-.presentation {
-  background-color: red;
-  height: 500px;
-}
-.presentation::after {
-  content: "";
-  display: block;
+div.presentation {
+  height: 350px;
   position: relative;
-  width: 100%;
-  height: 100%;
-  top: -200%;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 1;
 }
-.presentation .preImg {
+div.presentation div.preImg {
+  display: block;
+  position: absolute;
   width: 100%;
   height: 100%;
   overflow: hidden;
 }
-.presentation .preImg img {
+div.presentation div.preImg img {
   min-width: 100%;
   min-height: 100%;
 }
-.presentation .preDesc {
-  display: flex;
-  flex-wrap: wrap;
-  align-content: center;
-  position: relative;
+div.presentation div.preImg::after {
+  content: "";
+  display: block;
+  position: absolute;
   width: 100%;
   height: 100%;
-  top: -100%;
+  top: 0;
   left: 0;
-  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+div.presentation div.preDesc {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-evenly;
+  position: absolute;
+  width: 100%;
+  height: 100%;
   color: white;
 }
-.presentation .preDesc h2 {
-  font-size: 2.5em;
+div.presentation div.preDesc h2 {
+  font-size: 2em;
+  margin: 15px 0;
   padding: 0 20px;
-  height: 50%;
+  height: max-content;
   width: 100%;
   text-align: center;
 }
-.presentation .preDesc p {
-  font-size: 1.5em;
+div.presentation div.preDesc p {
+  font-size: 1em;
   width: 100%;
+  height: max-content;
   text-align: right;
-  padding: 0 20px;
+  padding: 0 30px;
 }
 
-.footer {
+@media (min-width: 481px) {
+  div.presentation div.preDesc h2 {
+    font-size: 2.5em;
+  }
+  div.presentation div.preDesc p {
+    padding: 0 80px;
+    font-size: 1.2em;
+  }
+}
+div.gallery {
+  display: block;
+  margin: 15px 0;
   padding: 10px 0;
   width: 100%;
-  min-height: 75px;
-  background-color: #0d6efd;
-  display: flex;
-  /* flex */
-  flex-wrap: wrap;
-  align-items: center;
 }
-.footer .subscribeForm {
+div.gallery h2 {
+  text-align: center;
+  font-size: 2.5em;
+  margin: 20px;
+}
+div.gallery div.galleryItems {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  justify-items: center;
   width: 100%;
+  padding: 0 10px;
 }
-.footer .subscribeForm form {
+div.gallery div.galleryItems div.galleryItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  width: 100%;
+  height: 250px;
+  border-radius: 5px;
+  transition: all 0.4s ease-in-out;
+}
+div.gallery div.galleryItems div.galleryItem img {
+  min-width: 100%;
+  min-height: 100%;
+}
+div.gallery div.galleryItems div.galleryItem:hover {
+  transform: scale(110%, 110%);
+  border-radius: 0px;
+  cursor: pointer;
+}
+
+@media (min-width: 481px) {
+  div.gallery .galleryItems {
+    grid-template-columns: repeat(auto-fill, 200px) !important;
+    justify-content: space-evenly;
+  }
+}
+footer.footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 10px 0;
+  background-color: rgb(26, 98, 165);
+}
+footer.footer div.socials {
+  width: 100%;
+  margin: 5px 0;
+  padding: 5px 0;
+}
+footer.footer div.socials p {
+  margin-left: 10%;
+  padding: 5px 0 15px 0;
+  font-size: 26px;
+}
+footer.footer div.socials ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  list-style: none;
+}
+footer.footer div.socials ul li a {
+  color: white;
+}
+footer.footer div.socials ul li a:hover {
+  color: rgb(174, 174, 174);
+}
+footer.footer div.socials ul li a svg {
+  width: 30px;
+  height: 30px;
+}
+footer.footer div.subscribe {
+  width: 100%;
+  margin: 10px 0;
+}
+footer.footer div.subscribe p {
+  margin: 5px 0;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  color: orange;
+}
+footer.footer div.subscribe form {
+  height: max-content;
   padding: 10px 0;
   display: flex;
   justify-content: center;
 }
-.footer .subscribeForm form input {
-  width: 50%;
-  height: 20px;
-  margin-right: 1%;
+footer.footer div.subscribe form input {
+  width: 60%;
+  padding: 7px 15px;
+  margin: 0 5px;
+  border: 1px solid gray;
   border-radius: 5px;
+  outline: none;
+  font-size: 13px;
+  font-weight: 500;
 }
-.footer .subscribeForm form button {
+footer.footer div.subscribe form button {
+  display: flex;
+  align-items: center;
+  padding: 7px 15px;
+  margin: 0 5px;
+  color: rgb(52, 52, 52);
   background-color: orange;
-  width: 30%;
+  border: 1px solid gray;
   border-radius: 5px;
+  font-size: 13px;
+  font-weight: 600;
 }
-.footer .copyright {
-  width: 200%;
-  font-size: 1.1em;
+footer.footer div.subscribe form button svg {
+  width: 18px;
+  height: 18px;
+  margin-left: 7px;
+}
+footer.footer div.copyright {
+  width: 100%;
+  padding: 5px;
+  margin: 5px 0;
+}
+footer.footer div.copyright p {
+  padding: 5px;
+  color: white;
   text-align: center;
 }
-.footer .copyright span {
-  font-size: 0.9em;
-  color: rebeccapurple;
+footer.footer div.copyright p span {
+  font-style: italic;
 }
-.footer .socials {
-  width: 100%;
-}
-.footer .socials ul {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-.footer .socials ul li {
-  margin: 3%;
-  font-size: 2em;
-}
-.footer .socials ul li a {
-  color: #000;
-  text-decoration: none;
-}
-.footer .socials ul li a:hover {
-  color: lightgray;
-}
+
 @media (min-width: 481px) {
-  .footer .subscribeForm form input {
-    width: 45%;
+  footer.footer div.socials {
+    width: 40%;
   }
-  .footer .subscribeForm form button {
-    width: 20%;
+  footer.footer div.subscribe {
+    width: 60%;
   }
 }
 @media (min-width: 1024px) {
-  .footer {
-    flex-wrap: nowrap;
-  }
-  .footer .subscribeForm form input {
-    width: 55%;
-  }
-  .footer .subscribeForm form button {
-    width: 35%;
+  footer.footer > * {
+    width: 33% !important;
   }
 }
-
-/* Cuantos Sliders Tiene Tu Web?*/
 @keyframes slideAnimation {
   0% {
     margin-left: 0;
   }
   10% {
+    margin-left: -100%;
+  }
+  40% {
+    margin-left: -100%;
+  }
+  50% {
+    margin-left: -200%;
+  }
+  70% {
+    margin-left: -200%;
+  }
+  80% {
     margin-left: 0;
-  }
-  95% {
-    margin-left: -100%;
-  }
-  100% {
-    margin-left: -100%;
   }
 }
 .sliders {
-  /* display: none; */
+  width: 100%;
+  max-width: 1024px;
+  height: 350px;
   margin: 0 auto;
   overflow: hidden;
-  width: 100%;
-  max-width: 1280px;
-  height: 35vw;
-  min-height: 300px;
-  max-height: 500px;
-  background-color: white;
 }
 .sliders ul {
   display: flex;
-  animation: slideAnimation 5s infinite ease-out;
+  animation: slideAnimation 15s infinite ease-out;
   width: 300%;
   height: 100%;
-  /* background-color: aqua; */
+  list-style: none;
 }
 .sliders ul li {
-  display: block;
+  display: flex;
+  position: relative;
   width: 100%;
   height: 100%;
+  overflow: hidden;
 }
 .sliders ul li img {
-  display: block;
-  width: 100%;
-  height: 100%;
+  min-width: 100%;
+  min-height: 100%;
 }
-.sliders ul li p {
-  display: block;
-  position: relative;
-  bottom: 50px;
-  font-size: 2em;
+.sliders ul li div {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  width: 100%;
+}
+.sliders ul li div p {
+  width: max-content;
+  margin: 5px 0;
+  padding: 5px 25px;
+  font-size: 1.5em;
   text-align: center;
   text-shadow: 0 0 10px black;
   color: white;
-}
-.gallery {
-  display: block;
-  /* block */
-  padding: 15px 0;
-  width: 100%;
-}
-.gallery h2 {
-  text-align: center;
-  font-size: 2.5em;
-  margin: 20px;
-}
-.gallery .galleryItems {
-  width: 100%;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-evenly;
-}
-.gallery .galleryItems .galleryItem {
-  margin: 0.5% 0;
-  display: flex;
-  overflow: hidden;
-  width: 48%;
-  max-height: 350px;
-}
-.gallery .galleryItems .galleryItem img {
-  display: block;
-  margin: auto;
-  max-width: 100%;
-  max-height: 100%;
-}
-@media (min-width: 481px) {
-  .gallery .galleryItems .galleryItem {
-    width: 32%;
-  }
-}
-@media (min-width: 1024px) {
-  .gallery .galleryItems .galleryItem {
-    width: 24%;
-  }
+  background-color: rgba(47, 47, 47, 0.1);
 }
 
-.store {
-  /* display: none; */
-  padding: 15px 0;
-  /* background-color: red; */
-}
-.store .nav-search {
+div.store {
   margin: 10px 0;
-  width: 100%;
+  padding: 10px 0;
 }
-.store .nav-search form {
+div.store form.nav-search {
+  width: 100%;
+  margin: 10px 0;
+  padding-bottom: 10px;
+}
+div.store form.nav-search div.search-bar {
   display: flex;
   justify-content: center;
   align-content: center;
   flex-wrap: nowrap;
-  width: 100%;
-  column-gap: 10px;
+  width: max-content;
+  margin: 0 auto;
 }
-.store .nav-search form input[type=search] {
+div.store form.nav-search div.search-bar input[type=search] {
+  width: 100%;
+  margin: 0 5px;
+  padding: 8px 12px;
   border: 1px solid lightgray;
   border-radius: 5px;
-  padding: 5px 7px;
-  background-color: orange;
-  width: 50%;
   background-color: rgba(0, 0, 0, 0);
 }
-.store .nav-search form button,
-.store .nav-search form .controlFilter {
-  border: 1px solid lightgray;
+div.store form.nav-search div.search-bar button,
+div.store form.nav-search div.search-bar label {
+  display: flex;
+  align-items: center;
+  margin: 0 5px;
+  padding: 5px 10px;
+  border: 1px solid gray;
   border-radius: 5px;
-  padding: 5px 7px;
   background-color: orange;
+  cursor: pointer;
 }
-.store .nav-search form input#controlFilter {
+div.store form.nav-search div.search-bar button svg,
+div.store form.nav-search div.search-bar label svg {
+  width: 16px;
+  height: 16px;
+}
+div.store form.nav-search input#filter-control {
   display: none;
 }
-.store .nav-search form input#controlFilter:checked ~ .filters {
-  display: block;
+div.store form.nav-search input#filter-control:checked ~ div.filters {
+  height: 250px;
+  padding: 5px;
 }
-.store .nav-search form .filters {
-  display: none;
-  flex-wrap: wrap;
-  justify-content: center;
-  position: fixed;
+div.store form.nav-search div.filters {
   width: 100%;
-  height: 50vh;
-  z-index: 5;
-  left: 0;
-  bottom: 0;
-  background-color: rgb(255, 255, 255);
+  height: 0px;
+  padding: 0px;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
 }
-.store .nav-search form .filters .controlFilter {
-  display: block;
-  position: absolute;
-  right: 20px;
-  top: 10px;
-}
-.store .nav-search form .filters h3 {
-  text-align: center;
-  font-size: 1.2em;
-  width: 100%;
-  margin: 10px 0;
-  padding: 10px 0;
-}
-.store .nav-search form .filters .filterSelection {
-  padding: 5px 15px;
-}
-.store .nav-search form .filters .filterSelection .filter {
-  margin: 20px auto;
-  width: 90%;
-}
-.store .nav-search form .filters .filterSelection .filter h4 {
-  padding: 10px 30px;
-  font-size: 1.1em;
-}
-.store .nav-search form .filters .filterSelection .filter input[type=range] {
-  width: 100%;
-}
-.store .articles {
-  width: 100%;
-  margin: 20px 0;
+div.store form.nav-search div.filters > div {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
-  row-gap: 50px;
-}
-.store .articles .article {
-  /* 
-  border: 1px solid lightgray; */
-  cursor: pointer;
+  justify-content: center;
+  width: 100%;
   border-radius: 5px;
-  min-width: 200px;
-  width: 48%;
-  max-width: 250px;
-  min-height: 300px;
+  background-color: lightgray;
 }
-.store .articles .article:hover .articleDescription {
+div.store form.nav-search div.filters > div h3 {
+  width: 100%;
+  height: max-content;
+  margin: 5px 0;
+  padding: 5px 0;
+  text-indent: 10%;
+}
+div.store form.nav-search div.filters > div div.filter-selection {
+  width: 100%;
+}
+div.store form.nav-search div.filters > div div.filter-selection div.filter {
+  width: 90%;
+  margin: 0 auto 15px auto;
+}
+div.store form.nav-search div.filters > div div.filter-selection div.filter h4 {
+  padding: 5px 0;
+  font-size: 1.1em;
+  text-indent: 10%;
+}
+div.store form.nav-search div.filters > div div.filter-selection div.filter input[type=range] {
+  width: 100%;
+}
+div.store form.nav-search div.filters > div div.filter-selection div.filter label {
+  display: inline-flex;
+  width: max-content;
+  margin: 5px;
+}
+div.store form.nav-search div.filters > div div.filter-selection div.filter label > input {
+  margin: 0 7px;
+}
+div.store div.articles {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  justify-items: center;
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+}
+div.store div.articles div.article {
+  width: 100%;
   border: 1px solid lightgray;
-  /* background-color: aquamarine; */
-  /* height: 30%; */
+  border-radius: 5px;
+  cursor: pointer;
+  overflow: hidden;
 }
-.store .articles .article .articleImg {
-  border-radius: 5px 5px 0 0;
-  background-color: rgb(235, 235, 235);
+div.store div.articles div.article .articleImg {
   display: flex;
   overflow: hidden;
   width: 100%;
-  height: 250px;
+  height: 200px;
 }
-.store .articles .article .articleImg img {
-  display: block;
+div.store div.articles div.article .articleImg img {
   margin: auto;
   max-width: 100%;
   max-height: 100%;
 }
-.store .articles .article .articleDescription {
-  border: 1px solid lightgray;
+div.store div.articles div.article .articleDescription {
   padding: 3% 3%;
   position: relative;
+  border-top: 1px solid lightgrey;
   overflow: hidden;
-  border-radius: 0 0 5px 5px;
-  /* background-color: wheat; */
-  height: 20%;
 }
-.store .articles .article .articleDescription h3 {
+div.store div.articles div.article .articleDescription h3 {
   width: 100%;
-  /* background-color: red; */
-  display: inline;
-  margin: 5% 0;
-  font-size: 1.4em;
-  height: 20%;
+  padding: 1px 0;
   white-space: nowrap;
-  text-overflow: clip;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
-.store .articles .article .articleDescription p {
-  /* background-color: aqua; */
-  color: black;
-  font-size: 1.4em;
-  margin: 5% 0;
-  height: 45%;
+div.store div.articles div.article .articleDescription p {
+  padding: 2px 0;
+  text-align: center;
   white-space: nowrap;
-  text-overflow: clip;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
-.store .articles .article .articleDescription p span {
+div.store div.articles div.article .articleDescription p span {
+  display: inline-block;
+  width: max-content;
   font-size: 0.7em;
   color: green;
   text-decoration: line-through;
 }
-@media (min-width: 481px) {
-  .store {
-    /* .articles{
-        .article{
-            width: 31%;
-        }
-    } */
-  }
-  .store .nav-search form {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  .store .nav-search form .filters {
-    background-color: lightgray;
-    display: none;
-    position: static;
-    width: 100%;
-    height: auto;
-    margin: 10px 0;
-    padding: 0;
-  }
-  .store .nav-search form .filters h3 {
-    display: none;
-  }
-  .store .nav-search form .filters .filterSelection {
-    display: flex;
-  }
-  .store .nav-search form .filters .filterSelection .filter {
-    margin: 0 10px;
-  }
-}
-@media (min-width: 1024px) {
-  .store {
-    /* .articles{
-        .article{
-            width: 23.2%;
-        }
-    } */
-  }
-}
 
-.contactForm {
-  /* display: none; */
-  /* just comment */
-  width: 100%;
-  padding: 10px 0;
+@media (min-width: 481px) {
+  div.store form.nav-search div.search-bar input[type=search] {
+    width: 300px;
+  }
+  div.store div.articles {
+    grid-template-columns: repeat(auto-fill, 200px) !important;
+    justify-content: space-evenly;
+  }
 }
-.contactForm form {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-.contactForm form label, .contactForm form input, .contactForm form textarea, .contactForm form button {
-  display: block;
-  width: 90%;
-  margin-top: 7px;
-}
-.information {
-  padding: 10px 0;
+div.information {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  row-gap: 10px;
+  padding: 10px 0;
 }
-.information .article {
+div.information div.article {
   padding: 10px;
   width: 100%;
 }
-.information .article h2 {
+div.information div.article h2 {
   font-size: 2em;
   text-align: center;
   margin: 15px 0;
 }
-.information .article img {
-  display: block;
-  position: static;
-  max-height: 300px;
-  max-width: 95%;
-  margin: 5px auto;
-}
-.information .article p {
+div.information div.article p {
+  padding: 5px;
   font-size: 1.2em;
   text-align: justify;
 }
+div.information div.article p img {
+  width: 100%;
+  padding: 5px 10px;
+}
+
 @media (min-width: 481px) {
-  .information .article {
-    width: 46%;
+  div.information div.article {
+    width: 50%;
   }
-  .information .article:last-child {
-    width: 94%;
-  }
-  .information .article:last-child img {
-    float: left;
+  div.information div.article:nth-child(3) {
     width: 80%;
-    margin: 5px 10px;
-    max-width: 500px;
-    max-height: 400px;
+  }
+  div.information div.article:nth-child(3) img {
+    width: 400px;
+    float: left;
   }
 }
 @media (min-width: 1024px) {
-  .information .article {
-    width: 46%;
+  div.information div.article p img {
+    width: 400px;
   }
-  .information .article:last-child img {
-    width: 50%;
-    margin: 1%;
+  div.information div.article:nth-child(1) img {
+    float: left;
   }
-  .information .article img {
-    width: 100%;
+  div.information div.article:nth-child(2) img {
+    float: right;
   }
 }
-
-.qanda {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 3% 5%;
-}
-.qanda .questions {
+div.contact-us {
   width: 100%;
-  border-radius: 10px;
-  padding: 2%;
-}
-.qanda .questions h2 {
-  text-align: center;
-  font-size: 2em;
-  padding: 30px 0;
-}
-.qanda .questions .question {
-  padding: 1% 2%;
-  background-color: rgb(233, 233, 233);
-  margin: 10px 0;
-}
-.qanda .questions .question h3 {
-  font-size: 1.5em;
-  padding: 10px;
-}
-.qanda .questions .question p {
-  font-size: 1.2em;
-}
-.qanda .qandaExtra {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-.qanda .qandaExtra div {
-  width: 80%;
-  display: flex;
-  flex-wrap: wrap;
-  align-content: space-around;
-}
-.qanda .qandaExtra div img {
-  max-width: 100%;
-  max-height: 100%;
-}
-@media (min-width: 481px) {
-  .qanda {
-    flex-wrap: nowrap;
-  }
-  .qanda .questions {
-    width: 50%;
-  }
-  .qanda .qandaExtra {
-    max-width: 50%;
-    display: flex;
-  }
-  .qanda .qandaExtra div {
-    display: flex;
-    align-content: space-around;
-  }
-  .qanda .qandaExtra div img {
-    max-width: 100%;
-    max-height: 100%;
-  }
-}
-/******************************************************************
-Ajustes De Paginas
-******************************************************************/
-.contactUs {
-  width: 90%;
   padding: 5%;
   display: flex;
   justify-content: space-around;
   flex-flow: row wrap;
 }
-.contactUs .contactForm, .contactUs .map {
-  margin: 10px 0;
+div.contact-us div.contact-form,
+div.contact-us div.map {
   width: 100%;
+  margin: 10px 0;
+  padding: 5px;
 }
-.contactUs .contactForm h2, .contactUs .map h2 {
+div.contact-us div.contact-form h2,
+div.contact-us div.map h2 {
   text-align: center;
   font-size: 2em;
-  margin: 20px 0;
+  padding: 10px;
 }
-.contactUs .contactForm iframe, .contactUs .map iframe {
+div.contact-us div.contact-form p,
+div.contact-us div.map p {
+  padding: 10px 20px;
+  text-align: justify;
+  font-size: large;
+  color: gray;
+}
+div.contact-us div.map iframe {
+  display: block;
   width: 100%;
+  height: 300px;
+  margin: 0 auto;
+  border-radius: 5px;
 }
-.contactUs .contactForm p, .contactUs .map p {
+div.contact-us div.map div {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
   margin: 20px 0;
-  font-size: 1.3em;
+  font-size: 1.2em;
 }
-.contactUs .contactForm p i, .contactUs .map p i {
-  margin: 5px 15px 10px 0;
+div.contact-us div.map div > * {
+  margin: 0 10px;
 }
-.contactUs .contactForm p a, .contactUs .map p a {
+div.contact-us div.map div svg {
+  width: 20px;
+  height: 20px;
+}
+div.contact-us div.map div a {
   color: inherit;
   text-decoration: none;
 }
+div.contact-us div.map div a:hover {
+  text-decoration: underline;
+}
+div.contact-us div.contact-form form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 85%;
+  margin: 5px auto;
+}
+div.contact-us div.contact-form form input,
+div.contact-us div.contact-form form textarea,
+div.contact-us div.contact-form form button {
+  padding: 7px 13px;
+  border-radius: 5px;
+  border: 1px solid gray;
+}
+div.contact-us div.contact-form form div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+div.contact-us div.contact-form form div label,
+div.contact-us div.contact-form form div input,
+div.contact-us div.contact-form form div textarea {
+  width: 100%;
+  margin-bottom: 8px;
+}
+div.contact-us div.contact-form form div textarea {
+  resize: none;
+}
+div.contact-us div.contact-form form button {
+  width: 100%;
+  color: rgb(57, 57, 57);
+  font-weight: bold;
+  background-color: orange;
+  cursor: pointer;
+}
+
 @media (min-width: 481px) {
-  .contactUs .contactForm, .contactUs .map {
-    width: 80%;
+  div.contact-us .contact-form {
+    width: 75% !important;
   }
 }
 @media (min-width: 1024px) {
-  .contactUs .contactForm, .contactUs .map {
-    width: 45%;
+  div.contact-us .contact-form,
+  div.contact-us .map {
+    width: 50% !important;
+  }
+}
+div.qanda {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 3% 5%;
+}
+div.qanda div.questions {
+  width: 100%;
+  border-radius: 10px;
+  padding: 2%;
+}
+div.qanda div.questions h2 {
+  width: 100%;
+  padding: 20px 0 30px 0;
+  text-align: center;
+  font-size: 2em;
+}
+div.qanda div.questions div.question {
+  width: 100%;
+  margin: 10px 0;
+  padding: 13px;
+  border-radius: 5px;
+  background-color: rgb(233, 233, 233);
+}
+div.qanda div.questions div.question h3 {
+  font-size: 1.5em;
+  padding: 0 0 7px 5px;
+}
+div.qanda div.questions div.question p {
+  font-size: 1.2em;
+}
+div.qanda div.qanda-extra {
+  display: flex;
+  justify-content: center;
+  float: right;
+  width: 100%;
+  height: max-content;
+}
+div.qanda div.qanda-extra div {
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-around;
+}
+div.qanda div.qanda-extra div img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+@media (min-width: 768px) {
+  div.qanda div.questions {
+    width: 50%;
+  }
+  div.qanda div.qanda-extra {
+    width: 50%;
+    padding-top: 100px;
+  }
+}
+@media (min-width: 1024px) {
+  div.qanda div.questions {
+    width: 65%;
+  }
+  div.qanda div.qanda-extra {
+    width: 35%;
   }
 }
 
