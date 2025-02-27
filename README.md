@@ -1,8 +1,6 @@
 # WebDevelopmentCourse
 
-Mi primer proyecto creado para la cursada de **Desarrollo Web** de **[CODERHOUSE](https://www.coderhouse.com/)**
-
-Visita la [version final](https://webdevelopmentcourse-70b19.web.app)
+Proyecto creado para la cursada de **Desarrollo Web** de **[CODERHOUSE](https://www.coderhouse.com/)**
 
 ### Descripcion:
 
@@ -11,5 +9,7 @@ Como meta de la cursada, se creo 5 paginas con un contenido distintivo, una Cabe
 ### En este proyecto se aplico y se implemento:
 
 - Herramientas para el diseño visual de la pagina, como Figma.
-- HTML, CSS, y algunos frameworks y librerias como Bootstrap y SASS.
-- Uso de iconos de [Bootstrap](https://icons.getbootstrap.com/).
+- HTML, CSS, y algunos frameworks Bootstrap y librerias como SASS.
+- Uso de iconos de Bootstrap.
+
+Puedes visitar el proyecto final haciendo yendo a [https://webdevelopmentcourse-70b19.web.app/](https://webdevelopmentcourse-70b19.web.app/)
